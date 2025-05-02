@@ -1,0 +1,239 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "theme": "kendall"
+  },
+  "basics": {
+    "name": "Daniel Viaño Castro",
+    "label": "C++ Software Engineer",
+    "image": "https://github.com/danividanivi.png",
+    "email": "danividanivi@gmail.com",
+    "phone": "+41772779118",
+    "summary": "Experienced C++ Software Engineer specializing in aerospace, air traffic management, and embedded systems. Skilled in developing robust, high-performance solutions for mission-critical applications, with a strong background in system integration and modern software methodologies. Proven track record in defense, surveying, and advanced imaging systems.",
+    "location": {
+      "countryCode": "CH",
+      "city": "Rorschach",
+      "region": "St. Gallen",
+      "postalCode": "9400"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "daniel-viano",
+        "url": "https://www.linkedin.com/in/daniel-viano/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Darwin Recruitment",
+      "position": "Embedded Software Engineer (Contractor)",
+      "startDate": "2025-01-02",
+      "summary": "Embedded Software Engineer for Hexagon Productization Center, developing hybrid airborne sensor systems for advanced imaging and data acquisition.",
+      "highlights": [
+        "Developed firmware in C++ for airborne cameras and LiDAR",
+        "Conducted unit testing with gtest and integration testing with pytest",
+        "Focused on image processing and data acquisition",
+        "Developed for Embedded Linux (Zynq UltraScale+) with Petalinux SDK"
+      ],
+      "url": "https://www.linkedin.com/company/darwin-recruitment-3/",
+      "location": "Heerbrugg, St. Gallen, Switzerland"
+    },
+    {
+      "name": "Akkodis",
+      "position": "Embedded Software Developer (Consultant)",
+      "startDate": "2022-05-31",
+      "endDate": "2024-12-31",
+      "summary": "Developed handheld image acquisition devices for SAFRAN Vectronix, focusing on sensor integration, user interface, testing, and system validation.",
+      "highlights": [
+        "Developed firmware in C++ using Qt for user interface",
+        "Integrated sensors for handheld image acquisition devices",
+        "Conducted software testing and system validation with gtest and Robot Framework",
+        "Developed for different Embedded Linux platforms with Petalinux SDK and Yocto"
+      ],
+      "url": "https://www.linkedin.com/company/akkodis/",
+      "location": "Heerbrugg, St Gallen, Switzerland"
+    },
+    {
+      "name": "Ad Maiorem Consulting",
+      "position": "ATC Software Developer (Consultant)",
+      "startDate": "2020-03-31",
+      "endDate": "2022-05-31",
+      "summary": "Built and maintained surveillance software for Air Traffic Control systems for INDRA, supporting SACTA and iTEC alliance members in mission-critical environments.",
+      "highlights": [
+        "Maintained legacy code in Ada for surveillance software",
+        "Implemented new capabilities in C++, such as the integration of ADS-B",
+        "Developed for Air Traffic Control systems",
+        "Ensured mission-critical software reliability"
+      ],
+      "url": "https://www.linkedin.com/company/ad-maiorem/",
+      "location": "Gijón, Asturias, Spain"
+    },
+    {
+      "name": "Pildo Labs",
+      "position": "Aerospace Engineer",
+      "startDate": "2017-10-31",
+      "endDate": "2020-02-28",
+      "summary": "Designed and developed coordination systems for manned and unmanned aircraft, including air navigation and ADS-B/GNSS acquisition solutions for aerospace initiatives.",
+      "highlights": [
+        "Developed navigation and communication software in C++ for 25 kg UAV and manned helicopters",
+        "Used C++ with Qt for UI in ground control systems",
+        "Integrated ADS-B and GNSS acquisition solutions",
+        "Designed coordination systems for aerial surveillance and firefighting"
+      ],
+      "url": "https://www.linkedin.com/company/pildo-labs/",
+      "location": "Rozas Aerodrome, Lugo, Spain"
+    },
+    {
+      "name": "EUROCONTROL",
+      "position": "Trainee",
+      "startDate": "2017-03-31",
+      "endDate": "2017-12-31",
+      "summary": "Conducted Pan-European studies on continuous climb/descent operations, managed ADS-B data, and validated tools and configurations for air traffic research.",
+      "highlights": [
+        "Filtered and analyzed ADS-B data for air traffic research",
+        "Validated tools and configurations for continuous climb/descent operations analysis using Java"
+      ],
+      "url": "https://www.linkedin.com/company/eurocontrol/",
+      "location": "Brussels, Belgium"
+    },
+    {
+      "name": "Universitat Politècnica de Catalunya",
+      "position": "Communications Trainee",
+      "startDate": "2016-09-30",
+      "endDate": "2017-02-28",
+      "summary": "Managed web, email, and social networks for the student association, enhancing digital communication and engagement.",
+      "url": "https://www.linkedin.com/school/universitat-politecnica-de-catalunya/",
+      "location": "Castelldefels, Barcelona, Spain"
+    },
+    {
+      "name": "Born Positiu S.L.",
+      "position": "Android Developer",
+      "startDate": "2016-02-28",
+      "endDate": "2016-09-30",
+      "summary": "Developed a driving support system, including GPS and RTK training modules for mobile platforms.",
+      "highlights": [
+        "Android app developed in Java with extensive use of Google Maps API and location services"
+      ],
+      "location": "Castelldefels ESA-BIC, Barcelona, Spain"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Club Waterpolo Lugo",
+      "position": "President",
+      "startDate": "2018-04-30",
+      "endDate": "2020-12-31",
+      "summary": "Founder and first president of Club Waterpolo Lugo.",
+      "highlights": [
+        "Founded and led Club Waterpolo Lugo from its inception to its establishment as a recognized sports entity with several teams and categories."
+      ],
+      "url": "https://www.linkedin.com/company/19075422"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universitat Politècnica de Catalunya · BarcelonaTech (UPC)",
+      "area": "Aerospace Engineering",
+      "studyType": "Bachelor's Degree",
+      "description": "Specialized in Air Navigation Engineering, with a focus on aerospace principles, flight dynamics, avionics, and air traffic management systems.",
+      "startDate": "2012-09-15",
+      "endDate": "2017-06-31"
+    },
+    {
+      "institution": "Universidade de Santiago de Compostela",
+      "area": "Unmanned Aerial Systems Engineering and Operations",
+      "studyType": "Master's Degree",
+      "description": "Specialized in unmanned aerial systems design, operations, regulations, integration with airspace, and advanced avionics for drones.",
+      "startDate": "2018-09-15",
+      "endDate": "2019-06-31"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages and Frameworks",
+      "level": "Expert",
+      "keywords": [
+        "C++",
+        "Python",
+        "Ada",
+        "CMake",
+        "GoogleTest",
+        "pytest",
+        "gtest"
+      ]
+    },
+    {
+      "name": "Software Development & Methodologies",
+      "level": "Expert",
+      "keywords": [
+        "Scrum",
+        "Jira",
+        "Git",
+        "Unit/Integration Testing",
+        "Github/Gitlab CI/CD",
+        "AI-assisted Development"
+      ]
+    },
+    {
+      "name": "Embedded Systems",
+      "level": "Advanced",
+      "keywords": [
+        "Embedded Linux",
+        "Yocto Project",
+        "Petalinux",
+        "Firmware Development",
+        "Software Validation",
+        "Systems Integration"
+      ]
+    },
+    {
+      "name": "Air Traffic & Aerospace",
+      "level": "Advanced",
+      "keywords": [
+        "Air Traffic Control",
+        "ADS-B",
+        "GNSS",
+        "Unmanned Aerial Vehicle (UAV)",
+        "Aviation",
+        "Systems Engineering"
+      ]
+    },
+    {
+      "name": "Image Processing & Sensors",
+      "level": "Intermediate",
+      "keywords": [
+        "Photogrammetry",
+        "LiDAR",
+        "GPS",
+        "RTK",
+        "Sensor Integration"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Full Professional"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "Galician",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "German",
+      "fluency": "TELC A2"
+    }
+  ],
+  "references": [
+    {
+      "name": "Pablo Ramos Lainez",
+      "reference": "Daniel is an outstanding software engineer with strong C++ and embedded systems expertise. He consistently delivers high-quality solutions and demonstrates excellent teamwork, always willing to support and share knowledge with colleagues. His technical skills, work ethic, and multilingual abilities make him a valuable asset to any team.",
+      "url": "https://www.linkedin.com/in/pablo-ramos-lainez/"
+    }
+  ]
+}
