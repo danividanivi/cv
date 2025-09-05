@@ -136,7 +136,9 @@
       "institution": "Universitat Politècnica de Catalunya · BarcelonaTech (UPC)",
       "area": "Aerospace Engineering",
       "studyType": "Bachelor's Degree",
-      "description": "Specialized in Air Navigation Engineering, with a focus on aerospace principles, flight dynamics, avionics, and air traffic management systems.",
+      "courses": [
+        "Specialized in Air Navigation Engineering, with a focus on aerospace principles, flight dynamics, avionics, and air traffic management systems."
+      ],
       "startDate": "2012-09-15",
       "endDate": "2017-06-31"
     },
@@ -144,7 +146,9 @@
       "institution": "Universidade de Santiago de Compostela",
       "area": "Unmanned Aerial Systems Engineering and Operations",
       "studyType": "Master's Degree",
-      "description": "Specialized in unmanned aerial systems design, operations, regulations, integration with airspace, and advanced avionics for drones.",
+      "courses": [
+        "Specialized in unmanned aerial systems design, operations, regulations, integration with airspace, and advanced avionics for drones."
+      ],
       "startDate": "2018-09-15",
       "endDate": "2019-06-31"
     }
