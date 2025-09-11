@@ -17,11 +17,8 @@ jobs:
     - name: Install resume-cli
       run: npm install -g resume-cli
 
-    - name: Install theme
-      run: npm install -g jsonresume-theme-kendall
-
-    - name: Install puppeteer
-      run: npm install -g puppeteer
+    - name: Install dependencies
+      run: npm install jsonresume-theme-kendall puppeteer
 
     - name: Export HTML
       run: resume export index.html --theme kendall
