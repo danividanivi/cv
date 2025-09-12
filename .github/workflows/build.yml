@@ -33,7 +33,7 @@ jobs:
       run: resume export index.html --theme danivi-style
 
     - name: Export PDF
-      run: resume export resume.pdf --theme danivi-style
+      run: resume export resume.pdf --theme danivi-style --format pdf
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
