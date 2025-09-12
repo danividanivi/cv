@@ -50,6 +50,7 @@ jobs:
         echo "Verifying puppeteer configuration..."
         node -e "const puppeteer = require('puppeteer'); console.log('Puppeteer version:', puppeteer.defaultArgs());"
         echo "Starting PDF generation..."
+        export PUPPETEER_ARGS='--no-sandbox,--disable-setuid-sandbox,--disable-dev-shm-usage,--disable-gpu'
         npx resume-cli export resume.pdf --theme danivi-style --format pdf
         echo "PDF generation completed"
         ls -la resume.pdf
@@ -59,6 +60,8 @@ jobs:
           echo "PDF file was not created!"
           exit 1
         fi
+      env:
+        PUPPETEER_ARGS: --no-sandbox,--disable-setuid-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-web-security
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
