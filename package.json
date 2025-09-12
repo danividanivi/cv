@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "jsonresume-theme-cora": "^0.1.1",
+    "jsonresume-theme-even": "^0.26.0",
+    "jsonresume-theme-kendall": "^0.2.0",
+    "jsonresume-theme-straightforward": "^0.2.0",
+    "jsonresume-theme-waterfall": "^1.0.2",
+    "resume-cli": "^3.0.8"
+  }
+}

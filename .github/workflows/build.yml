@@ -25,13 +25,16 @@ jobs:
       run: npm install -g resume-cli
 
     - name: Install dependencies
-      run: npm install jsonresume-theme-kendall puppeteer
+      run: |
+        npm install puppeteer
+        mkdir -p node_modules/jsonresume-theme-danivi-style
+        cp -r danivi-style/* node_modules/jsonresume-theme-danivi-style/
 
     - name: Export HTML
-      run: resume export index.html --theme kendall
+      run: resume export index.html --theme danivi-style
 
     - name: Export PDF
-      run: resume export resume.pdf --theme kendall
+      run: resume export resume.pdf --theme danivi-style
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
