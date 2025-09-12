@@ -1,0 +1,21 @@
+{
+  "name": "jsonresume-theme-danivi-style",
+  "version": "1.0.0",
+  "description": "A compact, professional JSON Resume theme for Daniel Viaño",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jsonresume",
+    "theme",
+    "resume",
+    "cv",
+    "compact"
+  ],
+  "author": "Daniel Viaño",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.7.7"
+  }
+}
