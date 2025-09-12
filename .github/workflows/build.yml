@@ -47,10 +47,12 @@ jobs:
 
     - name: Export PDF
       run: |
-        echo "Verifying puppeteer configuration..."
-        node -e "const puppeteer = require('puppeteer'); console.log('Puppeteer version:', puppeteer.defaultArgs());"
+        echo "Setting up puppeteer configuration..."
+        export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
+        export PUPPETEER_EXECUTABLE_PATH=$(which google-chrome-stable || which chromium-browser || which chromium || echo "")
+        echo "Puppeteer executable: $PUPPETEER_EXECUTABLE_PATH"
         echo "Starting PDF generation..."
-        export PUPPETEER_ARGS='--no-sandbox,--disable-setuid-sandbox,--disable-dev-shm-usage,--disable-gpu'
+        export PUPPETEER_ARGS='--no-sandbox,--disable-setuid-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-web-security,--disable-features=VizDisplayCompositor'
         npx resume-cli export resume.pdf --theme danivi-style --format pdf
         echo "PDF generation completed"
         ls -la resume.pdf
@@ -61,7 +63,8 @@ jobs:
           exit 1
         fi
       env:
-        PUPPETEER_ARGS: --no-sandbox,--disable-setuid-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-web-security
+        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 1
+        PUPPETEER_ARGS: --no-sandbox,--disable-setuid-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-web-security,--disable-features=VizDisplayCompositor
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
