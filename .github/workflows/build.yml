@@ -42,8 +42,6 @@ jobs:
 
     - name: Export HTML
       run: |
-        echo "Verifying theme installation..."
-        npx resume-cli themes
         echo "Exporting HTML..."
         npx resume-cli export index.html --theme danivi-style
 
