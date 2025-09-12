@@ -6,7 +6,7 @@
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-straightforward": "^0.2.0",
     "jsonresume-theme-waterfall": "^1.0.2",
-    "resume-cli": "^3.0.8"
+    "resume-cli": "^3.1.2"
   },
   "devDependencies": {
     "puppeteer": "^24.20.0"
