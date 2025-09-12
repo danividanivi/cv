@@ -30,12 +30,27 @@ jobs:
         npm install ./danivi-style
         echo "Verifying puppeteer installation..."
         npx puppeteer --version
+        echo "Configuring puppeteer for CI environment..."
+        mkdir -p ~/.config/puppeteer
+        cat > ~/.config/puppeteer/config.json << EOF
+        {
+          "args": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage", "--disable-gpu"]
+        }
+        EOF
+        echo "Puppeteer config created:"
+        cat ~/.config/puppeteer/config.json
 
     - name: Export HTML
-      run: npx resume-cli export index.html --theme danivi-style
+      run: |
+        echo "Verifying theme installation..."
+        npx resume-cli themes
+        echo "Exporting HTML..."
+        npx resume-cli export index.html --theme danivi-style
 
     - name: Export PDF
       run: |
+        echo "Verifying puppeteer configuration..."
+        node -e "const puppeteer = require('puppeteer'); console.log('Puppeteer version:', puppeteer.defaultArgs());"
         echo "Starting PDF generation..."
         npx resume-cli export resume.pdf --theme danivi-style --format pdf
         echo "PDF generation completed"
