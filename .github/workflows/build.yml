@@ -22,18 +22,30 @@ jobs:
         node-version: '20'
 
     - name: Install resume-cli
-      run: npm install -g resume-cli
+      run: npm install resume-cli
 
     - name: Install dependencies
       run: |
         npm install puppeteer
         npm install ./danivi-style
+        echo "Verifying puppeteer installation..."
+        npx puppeteer --version
 
     - name: Export HTML
-      run: resume export index.html --theme danivi-style
+      run: npx resume-cli export index.html --theme danivi-style
 
     - name: Export PDF
-      run: resume export resume.pdf --theme danivi-style --format pdf
+      run: |
+        echo "Starting PDF generation..."
+        npx resume-cli export resume.pdf --theme danivi-style --format pdf
+        echo "PDF generation completed"
+        ls -la resume.pdf
+        if [ -f resume.pdf ]; then
+          echo "PDF file exists and has size: $(stat -c%s resume.pdf) bytes"
+        else
+          echo "PDF file was not created!"
+          exit 1
+        fi
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
