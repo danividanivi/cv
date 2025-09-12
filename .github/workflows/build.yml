@@ -19,7 +19,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '20'
 
     - name: Install resume-cli
       run: npm install -g resume-cli
@@ -27,8 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         npm install puppeteer
-        mkdir -p node_modules/jsonresume-theme-danivi-style
-        cp -r danivi-style/* node_modules/jsonresume-theme-danivi-style/
+        npm install ./danivi-style
 
     - name: Export HTML
       run: resume export index.html --theme danivi-style
