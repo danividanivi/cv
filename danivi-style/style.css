@@ -1,4 +1,4 @@
-/* Danivi-Style Resume Theme - Compact and Professional */
+/* Danivi-Style Resume Theme - Canva-inspired Modern Design */
 
 * {
     margin: 0;
@@ -7,64 +7,100 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    font-size: 11px;
-    line-height: 1.4;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 5px;
+    line-height: 1.0;
     color: #333;
     background: white;
     max-width: 210mm;
-    margin: 0 auto;
-    padding: 15mm;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 .resume-container {
-    max-width: 100%;
-}
-
-/* Header */
-.header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #2c3e50;
+    max-width: 100%;
+    min-height: 100vh;
 }
 
-.name-title h1 {
-    font-size: 24px;
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 6px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.sidebar h3 {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Main Content Area */
+.main-content {
+    background: white;
+    color: #333;
+    width: 75%;
+    padding: 6px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/* Section Headers in Main Content */
+.main-content h3 {
     color: #2c3e50;
-    margin-bottom: 5px;
+    border-bottom-color: #ecf0f1;
+}
+
+/* Header - Large, prominent name with photo in sidebar */
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    page-break-inside: avoid;
+}
+
+.photo-container {
+    margin-bottom: 10px;
+}
+
+.profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 16px;
     font-weight: bold;
+    color: white;
+    margin-bottom: 3px;
+    letter-spacing: -0.5px;
 }
 
-.name-title h2 {
-    font-size: 14px;
-    color: #7f8c8d;
-    font-weight: normal;
-}
-
-.contact-info {
-    text-align: right;
+.header h2 {
     font-size: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: normal;
+    margin-bottom: 0;
 }
 
-.contact-info div {
-    margin-bottom: 2px;
-}
-
-.contact-info a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-/* Sections */
-section {
-    margin-bottom: 15px;
-}
-
+/* Section Headers */
 section h3 {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bold;
     color: #2c3e50;
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -73,204 +109,275 @@ section h3 {
     padding-bottom: 3px;
 }
 
-/* Summary */
-.summary p {
-    font-size: 11px;
-    line-height: 1.5;
-    text-align: justify;
-}
-
-/* Work Experience */
-.work-item {
-    margin-bottom: 12px;
-}
-
-.work-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 3px;
-}
-
-.work-title-company {
-    font-size: 12px;
-    flex: 1;
-}
-
-.work-dates {
-    font-size: 10px;
-    color: #7f8c8d;
-    flex-shrink: 0;
-    margin-left: 10px;
-}
-
-.work-location {
-    font-size: 10px;
-    color: #7f8c8d;
-    margin-bottom: 3px;
-}
-
-.work-summary {
-    font-size: 10px;
-    margin-bottom: 5px;
-    line-height: 1.4;
-}
-
-.work-highlights {
-    font-size: 10px;
-    margin-left: 15px;
-}
-
-.work-highlights li {
-    margin-bottom: 2px;
-    line-height: 1.3;
-}
-
-/* Education */
-.education-item {
+/* Prevent page breaks within sections */
+section {
     margin-bottom: 10px;
 }
 
-.education-header {
+.experience-item,
+.education-item,
+.reference-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 6px;
+}
+
+/* Professional Summary */
+.summary p {
+    font-size: 10px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #555;
+}
+
+/* Contact Section in Sidebar */
+.contact {
+    margin-bottom: 15px;
+}
+
+.contact-list {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 3px;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.education-degree-institution {
-    font-size: 12px;
-    flex: 1;
-}
-
-.education-degree-institution div {
-    font-size: 10px;
-    color: #7f8c8d;
-    margin-top: 2px;
-}
-
-.education-dates {
-    font-size: 10px;
-    color: #7f8c8d;
-    flex-shrink: 0;
-    margin-left: 10px;
-}
-
-.education-courses {
-    font-size: 10px;
-    margin-top: 5px;
-}
-
-.education-courses div {
-    margin-bottom: 2px;
+.contact-item {
+    font-size: 9px;
     line-height: 1.3;
 }
 
-/* Skills */
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.skill-category {
+.contact-item strong {
+    display: block;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2px;
     font-size: 10px;
 }
 
-.skill-category strong {
-    display: block;
-    margin-bottom: 3px;
-    color: #2c3e50;
+.contact-item div {
+    color: white;
 }
 
-.skill-keywords {
+.contact-item a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+/* Experience Section */
+.experience {
+    margin-bottom: 15px;
+}
+
+.experience-item {
+    margin-bottom: 8px;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.experience-date {
+    font-size: 10px;
+    color: #7f8c8d;
+    font-weight: bold;
+}
+
+.experience-company {
+    font-size: 10px;
+    color: #7f8c8d;
+    text-align: right;
+}
+
+.experience-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.experience-summary {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.experience-highlights {
+    font-size: 10px;
+    margin-left: 15px;
+    line-height: 1.4;
+}
+
+.experience-highlights li {
+    margin-bottom: 3px;
+    color: #666;
+}
+
+/* Education Section in Sidebar */
+.education {
+    margin-bottom: 15px;
+}
+
+.education-item {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-year {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    margin-bottom: 2px;
+    order: 1;
+}
+
+.education-degree {
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2px;
+    order: 2;
+}
+
+.education-institution {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.8);
+    order: 3;
+}
+
+/* Languages Section in Sidebar */
+.languages {
+    margin-bottom: 15px;
+}
+
+.language-item {
+    font-size: 9px;
+    margin-bottom: 6px;
+    color: white;
+    line-height: 1.3;
+}
+
+/* Expertise/Skills Section in Sidebar */
+.expertise {
+    margin-bottom: 15px;
+}
+
+.expertise-category {
+    margin-bottom: 12px;
+}
+
+.expertise-name {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.expertise-keywords {
     display: flex;
     flex-wrap: wrap;
     gap: 3px;
 }
 
-.skill-tag {
-    background: #ecf0f1;
-    padding: 2px 5px;
+.expertise-skill {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 2px 6px;
     border-radius: 3px;
-    font-size: 9px;
-    color: #34495e;
+    font-size: 8px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Languages */
-.languages-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+/* References Section */
+.references {
+    margin-bottom: 15px;
 }
 
-.language-item {
-    font-size: 10px;
-}
-
-/* References */
 .reference-item {
-    margin-bottom: 10px;
-    font-size: 10px;
+    margin-bottom: 12px;
 }
 
 .reference-name {
+    font-size: 11px;
     font-weight: bold;
-    margin-bottom: 5px;
     color: #2c3e50;
+    margin-bottom: 3px;
 }
 
-.reference-item blockquote {
-    font-style: italic;
+.reference-contact {
+    font-size: 10px;
+    color: #7f8c8d;
     line-height: 1.4;
-    margin-left: 10px;
-    border-left: 3px solid #ecf0f1;
-    padding-left: 10px;
 }
 
 /* Print optimizations */
 @media print {
     body {
-        font-size: 10px;
+        font-size: 9px;
+        padding: 15mm;
     }
 
-    .header {
-        margin-bottom: 10px;
-        padding-bottom: 8px;
+    .header h1 {
+        font-size: 24px;
     }
 
+    .header h2 {
+        font-size: 14px;
+    }
+
+    section h3 {
+        font-size: 12px;
+    }
+
+    /* Ensure sections can break across pages but individual items stay together */
     section {
-        margin-bottom: 12px;
-        page-break-inside: avoid;
+        break-inside: auto;
     }
 
-    .work-item,
-    .education-item {
+    .experience-item,
+    .education-item,
+    .reference-item {
         page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .profile-photo {
+        width: 70px;
+        height: 70px;
     }
 }
 
-/* Responsive adjustments for very small screens */
+/* Responsive adjustments */
 @media (max-width: 600px) {
-    .header {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-header {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .contact-info {
+    .experience-company {
         text-align: left;
-        margin-top: 10px;
-    }
-
-    .work-header,
-    .education-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .work-dates,
-    .education-dates {
-        margin-left: 0;
         margin-top: 3px;
+    }
+
+    .education-item {
+        flex-direction: column;
+    }
+
+    .education-year {
+        margin-right: 0;
+        margin-bottom: 3px;
     }
 }
