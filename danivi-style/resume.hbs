@@ -54,16 +54,6 @@
                 </div>
             </section>
 
-            <!-- Languages -->
-            {{#if resume.languages}}
-            <section class="languages">
-                <h3>Languages</h3>
-                {{#each resume.languages}}
-                <div class="language-item">{{language}} ({{fluency}})</div>
-                {{/each}}
-            </section>
-            {{/if}}
-
             <!-- Skills/Expertise -->
             {{#if resume.skills}}
             <section class="expertise">
@@ -96,6 +86,16 @@
                     <div class="education-degree">{{studyType}} in {{area}}</div>
                     <div class="education-institution">{{institution}}</div>
                 </div>
+                {{/each}}
+            </section>
+            {{/if}}
+
+            <!-- Languages -->
+            {{#if resume.languages}}
+            <section class="languages">
+                <h3>Languages</h3>
+                {{#each resume.languages}}
+                <div class="language-item">{{language}} ({{fluency}})</div>
                 {{/each}}
             </section>
             {{/if}}
