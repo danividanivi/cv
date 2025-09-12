@@ -14,7 +14,7 @@ body {
     background: white;
     max-width: 210mm;
     margin: 0;
-    padding: 0;
+    padding: 8px 0;
     min-height: 100vh;
 }
 
@@ -111,7 +111,7 @@ section h3 {
 
 /* Prevent page breaks within sections */
 section {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .experience-item,
@@ -126,6 +126,7 @@ section {
 .summary p {
     font-size: 10px;
     line-height: 1.4;
+    margin-top: 8px;
     margin-bottom: 15px;
     text-align: justify;
     color: #555;
@@ -133,7 +134,7 @@ section {
 
 /* Contact Section in Sidebar */
 .contact {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .contact-list {
@@ -166,7 +167,7 @@ section {
 
 /* Experience Section */
 .experience {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .experience-item {
@@ -219,7 +220,7 @@ section {
 
 /* Education Section in Sidebar */
 .education {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .education-item {
@@ -252,7 +253,7 @@ section {
 
 /* Languages Section in Sidebar */
 .languages {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .language-item {
@@ -264,7 +265,7 @@ section {
 
 /* Expertise/Skills Section in Sidebar */
 .expertise {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .expertise-category {
@@ -299,7 +300,7 @@ section {
 
 /* References Section */
 .references {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .reference-item {
