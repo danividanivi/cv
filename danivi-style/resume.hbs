@@ -107,7 +107,7 @@
             {{#if resume.basics.summary}}
             <section class="summary">
                 <h3>Summary</h3>
-                <p>{{resume.basics.summary}}</p>
+                <p>{{{highlightSkills resume.basics.summary resume.skills}}}</p>
             </section>
             {{/if}}
 
@@ -128,12 +128,12 @@
                     </div>
                     <div class="experience-title">{{position}}</div>
                     {{#if summary}}
-                    <div class="experience-summary">{{summary}}</div>
+                    <div class="experience-summary">{{{highlightSkills summary ../resume.skills}}}</div>
                     {{/if}}
                     {{#if highlights}}
                     <ul class="experience-highlights">
                         {{#each highlights}}
-                        <li>{{this}}</li>
+                        <li>{{{highlightSkills this ../../resume.skills}}}</li>
                         {{/each}}
                     </ul>
                     {{/if}}
