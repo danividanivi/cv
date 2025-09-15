@@ -81,10 +81,10 @@
       "endDate": "2020-02-28",
       "summary": "Designed and developed coordination systems for manned and unmanned aircraft, including air navigation and ADS-B/GNSS acquisition solutions for aerospace initiatives.",
       "highlights": [
-        "Developed navigation and communication software in C++ for 25 kg UAV and manned helicopters",
-        "Used C++ with Qt for UI in ground control systems",
-        "Integrated ADS-B and GNSS acquisition solutions",
-        "Designed coordination systems for aerial surveillance and firefighting"
+        "Designed coordination systems for aerial surveillance and firefighting operations, enabling 24/7 monitoring capabilities that extended firefighting operations beyond sunset through simultaneous management of manned and unmanned aircraft",
+        "Developed airborne navigation and communication software for 25kg UAV and manned helicopters, ensuring compliance with DO-178 and ED-12 aviation certification standards for autonomous flight operations using C++",
+        "Developed ground control station user interface, complying with DO-278 and ED-109 standards to provide operators with full view of firefighting operations instead of limited visual line-of-sight from helicopters, using C++ and Qt Framework",
+        "Integrated ADS-B, RADAR, and GNSS acquisition solutions, achieving centimeter-level positioning accuracy for precision aerial operations combining multiple data sources"
       ],
       "url": "https://www.linkedin.com/company/pildo-labs/",
       "location": "Rozas Aerodrome, Lugo, Spain"
@@ -96,10 +96,10 @@
       "endDate": "2017-12-31",
       "summary": "Conducted Pan-European studies on continuous climb/descent operations, managed ADS-B data, and validated tools and configurations for air traffic research.",
       "highlights": [
-        "Filtered and analyzed ADS-B data for air traffic research",
-        "Validated tools and configurations for continuous climb/descent operations analysis using Java"
+        "Contributed to the 2018 ECAC-wide study on continuous climb/descent operations that identified €150M in potential annual fuel savings across European airspace by fixing and validating the tools required written in Java",
+        "Analyzed the entire European air traffic ADS-B data over a full year, processing millions of flights to provide actionable insights for Pan-European air traffic optimization studies through advanced filtering and data analysis techniques"
       ],
-      "url": "https://www.linkedin.com/company/eurocontrol/",
+      "url": "https://www.eurocontrol.int/concept/continuous-climb-and-descent-operations",
       "location": "Brussels, Belgium"
     },
     {
@@ -135,7 +135,7 @@
       "endDate": "2020-12-31",
       "summary": "Founder and first president of Club Waterpolo Lugo.",
       "highlights": [
-        "Founded and led Club Waterpolo Lugo from its inception to its establishment as a recognized sports entity with several teams and categories."
+        "Founded and led Club Waterpolo Lugo from inception to establishment as a recognized sports entity, growing from 0 to 100+ members across 4 competitive teams (1 men's team, 1 women's team, and 2 youth categories) within 2 years through strategic sponsorship acquisition, operational management, and local sport promotion"
       ],
       "url": "https://www.linkedin.com/company/19075422"
     }
