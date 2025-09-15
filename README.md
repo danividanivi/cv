@@ -34,3 +34,28 @@ If the live links don't work:
 1. Check if the GitHub Actions build completed successfully
 2. Wait a few minutes for GitHub Pages to deploy
 3. Build locally using the instructions above
+
+## Dependency Management
+
+This repository uses [Dependabot](https://docs.github.com/en/code-security/dependabot) to automatically keep dependencies up to date.
+
+### Configuration
+- **Schedule**: Weekly on Mondays at 6:00 PM CET
+- **Scope**: All npm dependencies
+- **Strategy**: 
+  - Creates pull requests for minor and patch updates
+  - Ignores major version updates (requires manual review)
+  - Special handling for `puppeteer` (major updates ignored)
+- **Labels**: Automatically adds `dependencies` and `automated` labels
+- **Commit messages**: Prefixed with `deps` or `deps-dev`
+
+### Pull Request Management
+- Maximum of 10 open pull requests at once
+- Assigns pull requests to repository owner
+- Uses descriptive commit messages with scope information
+
+To merge dependency updates:
+1. Review the changes in the Dependabot pull request
+2. Check if any breaking changes are introduced
+3. Test the build locally if needed
+4. Merge the pull request
