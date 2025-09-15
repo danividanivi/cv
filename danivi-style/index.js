@@ -23,16 +23,27 @@ Handlebars.registerHelper('highlightSkills', function(text, skills) {
   if (!text) return '';
   if (!skills || skills.length === 0) return text;
 
-  // Collect all keywords from skills
+    // Collect all keywords from skills, excluding archived ones
   const keywords = [];
   skills.forEach(skill => {
     if (skill.keywords) {
-      keywords.push(...skill.keywords);
+      skill.keywords.forEach(keyword => {
+        // Skip archived skills
+        if (keyword !== "Ada" && keyword !== "RTK") {
+          keywords.push(keyword);
+        }
+      });
     }
   });
 
-  // Remove duplicates and sort by length descending
-  const uniqueKeywords = [...new Set(keywords)].sort((a, b) => b.length - a.length);
+  // Add common abbreviations/variants that should map to main keywords
+  const keywordMappings = {
+    'gtest': 'GoogleTest'
+  };
+
+  // Apply mappings and remove duplicates
+  const mappedKeywords = keywords.map(keyword => keywordMappings[keyword] || keyword);
+  const uniqueKeywords = [...new Set(mappedKeywords)].sort((a, b) => b.length - a.length);
 
   // Replace matching words with bold
   let highlighted = text;
