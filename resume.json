@@ -103,6 +103,8 @@
       "location": "Brussels, Belgium"
     },
     {
+      "_archived": true,
+      "_comment": "Communications Trainee - Archived as less relevant for current career focus",
       "name": "Universitat Politècnica de Catalunya",
       "position": "Communications Trainee",
       "startDate": "2016-09-30",
@@ -112,6 +114,8 @@
       "location": "Castelldefels, Barcelona, Spain"
     },
     {
+      "_archived": true,
+      "_comment": "Android Developer - Archived as less relevant for current embedded systems focus",
       "name": "Born Positiu S.L.",
       "position": "Android Developer",
       "startDate": "2016-02-28",
@@ -165,12 +169,10 @@
       "keywords": [
         "C++",
         "Qt",
-        "Python",
-        "Ada",
         "CMake",
-        "GoogleTest",
-        "pytest",
-        "gtest"
+        "Google Test",
+        "Python",
+        "pytest"
       ]
     },
     {
@@ -216,7 +218,6 @@
         "Photogrammetry",
         "LiDAR",
         "GPS",
-        "RTK",
         "Sensor Integration"
       ]
     }
