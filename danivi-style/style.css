@@ -1,3 +1,7 @@
+html {
+    margin: 0;
+    padding: 0;
+}
 /* Danivi-Style Resume Theme - Canva-inspired Modern Design */
 
 * {
@@ -12,17 +16,19 @@ body {
     line-height: 1.25; /* Improved readability */
     color: #333;
     background: white;
-    /* Full-bleed: remove constrained width & centering for PDF */
-    width: 210mm; /* match A4 width explicitly */
     margin: 0;
     padding: 0;
-    min-height: 297mm; /* ensure full page height */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 .resume-container {
     display: flex;
-    max-width: 100%;
-    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210mm; /* explicit A4 width */
+    height: 297mm; /* explicit A4 height */
 }
 
 /* Sidebar */
@@ -30,9 +36,9 @@ body {
     width: 25%;
     background: linear-gradient(135deg, #5d6d8a, #4a5d7a);
     color: white;
-    padding: 8px;
+    padding: 0 8px 8px 0; /* remove left/top padding so gradient flush at left/top */
     box-sizing: border-box;
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
 }
 
