@@ -31,7 +31,7 @@
   },
   "work": [
     {
-      "name": "Darwin Recruitment",
+      "name": "Darwin Recruitment - Hexagon",
       "position": "Embedded Software Engineer (Contractor)",
       "startDate": "2025-01-02",
       "summary": "Embedded Software Engineer at Hexagon Productization Center, developing hybrid airborne sensor systems for advanced imaging and data acquisition.",
@@ -46,7 +46,7 @@
       "location": "Heerbrugg, St. Gallen, Switzerland"
     },
     {
-      "name": "Akkodis",
+      "name": "Akkodis - SAFRAN Vectronix",
       "position": "Embedded Software Developer (Consultant)",
       "startDate": "2022-05-31",
       "endDate": "2024-12-31",
@@ -62,7 +62,7 @@
       "location": "Heerbrugg, St Gallen, Switzerland"
     },
     {
-      "name": "Ad Maiorem Consulting",
+      "name": "Ad Maiorem Consulting - INDRA",
       "position": "ATC Software Developer (Consultant)",
       "startDate": "2020-03-31",
       "endDate": "2022-05-31",
@@ -174,7 +174,8 @@
         "CMake",
         "Google Test",
         "Python",
-        "pytest"
+        "pytest",
+        "GStreamer"
       ]
     },
     {
@@ -185,6 +186,7 @@
         "Jira",
         "Git",
         "Unit/Integration Testing",
+        "Robot Framework",
         "Github/Gitlab CI/CD",
         "AI-assisted Development"
       ]
@@ -198,7 +200,8 @@
         "Petalinux",
         "Firmware Development",
         "Software Validation",
-        "Systems Integration"
+        "Systems Integration",
+        "Zynq UltraScale+"
       ]
     },
     {
@@ -206,7 +209,8 @@
       "level": "Advanced",
       "keywords": [
         "Air Traffic Control",
-        "ADS-B",
+        "ADS‑B",
+        "RADAR",
         "GNSS",
         "Unmanned Aerial Vehicle (UAV)",
         "Aviation",

@@ -124,7 +124,7 @@
                                 {{#if endDate}} - {{monthName endDate}} {{year endDate}}{{else}} - Present{{/if}}
                             {{/if}}
                         </div>
-                        <div class="experience-company">{{name}} | {{location}}</div>
+                        <div class="experience-company">{{#if url}}<a href="{{url}}" target="_blank">{{name}}</a>{{else}}{{name}}{{/if}} | {{location}}</div>
                     </div>
                     <div class="experience-title">{{position}}</div>
                     {{#if summary}}
