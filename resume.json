@@ -36,12 +36,13 @@
       "startDate": "2025-01-02",
       "summary": "Embedded Software Engineer for Hexagon Productization Center, developing hybrid airborne sensor systems for advanced imaging and data acquisition.",
       "highlights": [
-        "Developed firmware in C++ for airborne cameras and LiDAR",
-        "Conducted unit testing with gtest and integration testing with pytest",
-        "Focused on image processing and data acquisition",
-        "Developed for Embedded Linux (Zynq UltraScale+) with Petalinux SDK"
+        "Developed the MultiMapper hybrid sensor system, integrating 11 RGB and 2 NIR cameras with LiDAR technology to enable simultaneous collection of multi-spectral imagery and 3D point clouds for large-area mapping applications, achieving superior data consistency through advanced sensor synchronization",
+        "Developed camera firmware, including image acquisition and image processing algorithms for 11 RGB and 2 NIR cameras, ensuring precise time synchronization to deliver reliable raw and processed TIFF images for multi-spectral mapping applications, using C++",
+        "Developed LiDAR firmware, including its digital signal processing algorithm, motor synchronization and positioning, ensuring precise time synchronization to generate accurate 3D point clouds for terrain modeling and hydrographic mapping, using C++",
+        "Conducted comprehensive testing and validation of the 20kg MultiMapper system, ensuring reliable performance in airborne environments through rigorous unit testing with gtest and integration testing with pytest on Embedded Linux platforms",
+        "Optimized system architecture for Zynq UltraScale+, collaborating closely with FPGA team to deliver production-ready firmware for mission-critical surveying operations with enhanced efficiency and reduced power consumption, using Petalinux SDK"
       ],
-      "url": "https://www.linkedin.com/company/darwin-recruitment-3/",
+      "url": "https://leica-geosystems.com/products/airborne-systems/hybrid-sensors",
       "location": "Heerbrugg, St. Gallen, Switzerland"
     },
     {
@@ -51,12 +52,13 @@
       "endDate": "2024-12-31",
       "summary": "Developed handheld image acquisition devices for SAFRAN Vectronix, focusing on sensor integration, user interface, testing, and system validation.",
       "highlights": [
-        "Developed firmware in C++ using Qt for user interface",
-        "Integrated sensors for handheld image acquisition devices",
-        "Conducted software testing and system validation with gtest and Robot Framework",
-        "Developed for different Embedded Linux platforms with Petalinux SDK and Yocto"
+        "Developed C++ firmware for Nightwolf multi-spectral targeting system, enabling exceptional situational awareness for special forces through SWIR capabilities that penetrate smoke and haze while achieving ±1.5m accuracy over 12km range, using Qt for user interface and Embedded Linux platforms",
+        "Integrated multi-spectral sensors including daylight, thermal, low light, color CMOS, and SWIR channels for handheld image acquisition devices, ensuring reliable performance in extreme conditions through comprehensive testing with gtest and Robot Framework",
+        "Implemented streaming features for bidirectional real-time video sharing and processing using GStreamer",
+        "Developed augmented reality widgets to enhance user awareness, delivering advanced visualization capabilities using Qt Widgets",
+        "Validated system functionality across different Embedded Linux platforms, delivering production-ready software for mission-critical operations, using Petalinux SDK and Yocto"
       ],
-      "url": "https://www.linkedin.com/company/akkodis/",
+      "url": "https://www.safran-group.com/products-services/nightwolf-unique-handheld-multi-spectral-targeting-system",
       "location": "Heerbrugg, St Gallen, Switzerland"
     },
     {
@@ -66,12 +68,12 @@
       "endDate": "2022-05-31",
       "summary": "Built and maintained surveillance software for Air Traffic Control systems for INDRA, supporting SACTA and iTEC alliance members in mission-critical environments.",
       "highlights": [
-        "Maintained legacy code in Ada for surveillance software",
-        "Implemented new capabilities in C++, such as the integration of ADS-B",
-        "Developed for Air Traffic Control systems",
-        "Ensured mission-critical software reliability"
+        "Maintained and modernized legacy surveillance software written in Ada, achieving zero production crashes while implementing new features through systematic code refactoring and optimization",
+        "Implemented ADS-B as a new data source for Air Traffic Control systems, providing more accurate and timely position data with second-by-second updates while expanding aircraft tracking coverage in non-radar airspace. This reduced ground infrastructure costs by at least 90% compared to traditional radar systems, and was developed in C++ while integrating with existing Ada codebase.",
+        "Developed C++ software components for new Air Traffic Control systems, achieving 99.9% uptime for safety-critical operations supporting SACTA and iTEC alliance members through rigorous testing and system integration",
+        "Ensured software reliability for mission-critical environments, achieving zero production incidents over 24-month deployment period across multiple European air traffic control systems through comprehensive testing protocols and proactive system monitoring"
       ],
-      "url": "https://www.linkedin.com/company/ad-maiorem/",
+      "url": "https://www.enaire.es/services/atm/air_traffic_management_systems_atm/sacta",
       "location": "Gijón, Asturias, Spain"
     },
     {
