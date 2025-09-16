@@ -116,6 +116,7 @@
             <section class="experience">
                 <h3>Experience</h3>
                 {{#each resume.work}}
+                {{#unless _archived}}
                 <div class="experience-item">
                     <div class="experience-header">
                         <div class="experience-date">
@@ -138,6 +139,7 @@
                     </ul>
                     {{/if}}
                 </div>
+                {{/unless}}
                 {{/each}}
             </section>
             {{/if}}
