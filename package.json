@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "generate:txt": "node generate-txt.js"
+  },
   "dependencies": {
     "jsonresume-theme-cora": "^0.1.1",
     "jsonresume-theme-danivi-style": "file:danivi-style",

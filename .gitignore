@@ -3,6 +3,7 @@ node_modules
 # Build outputs
 index.html
 resume.pdf
+resume.txt
 
 # Test PDF files
 test_*.pdf

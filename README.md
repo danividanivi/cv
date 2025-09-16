@@ -20,7 +20,24 @@ npm install puppeteer
 npm install ./danivi-style
 resume export index.html --theme danivi-style
 resume export resume.pdf --theme danivi-style --format pdf
+npm run generate:txt # produces resume.txt (plain text / ATS friendly)
 ```
+
+### Plain Text Export
+
+The repository includes a plain text generator (`generate-txt.js`) that creates `resume.txt` for ATS systems or quick copy/paste:
+
+```sh
+npm run generate:txt
+```
+
+Output characteristics:
+- Excludes archived work experiences (those with `_archived: true`)
+- Uses normalized `YYYY-MM` dates
+- ASCII-friendly (special non-breaking spaces and uncommon hyphens removed)
+- Sections: Summary, Experience, Education, Skills, Languages, References
+
+You can modify `generate-txt.js` to omit references or adjust formatting if needed.
 
 ## Automated Build
 
