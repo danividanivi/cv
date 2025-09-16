@@ -168,15 +168,7 @@
     {
       "name": "Programming Languages and Frameworks",
       "level": "Expert",
-      "keywords": [
-        "C++",
-        "Qt",
-        "CMake",
-        "Google Test",
-        "Python",
-        "pytest",
-        "GStreamer"
-      ]
+      "keywords": ["C++", "Qt", "CMake", "Google Test", "Python", "pytest", "GStreamer"]
     },
     {
       "name": "Software Development & Methodologies",
@@ -220,12 +212,7 @@
     {
       "name": "Image Processing & Sensors",
       "level": "Intermediate",
-      "keywords": [
-        "Photogrammetry",
-        "LiDAR",
-        "GPS",
-        "Sensor Integration"
-      ]
+      "keywords": ["Photogrammetry", "LiDAR", "GPS", "Sensor Integration"]
     }
   ],
   "languages": [
