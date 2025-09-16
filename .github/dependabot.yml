@@ -16,8 +16,7 @@ updates:
       prefix-development: "deps-dev"
       include: "scope"
     labels:
-      - "dependencies"
-      - "automated"
+      - "enhancement"
     ignore:
       # Ignore major version updates for now
       - dependency-name: "*"
