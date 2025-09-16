@@ -8,12 +8,12 @@
 
 body {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    font-size: 5px;
-    line-height: 1.0;
+    font-size: 9px; /* Increased base font size */
+    line-height: 1.25; /* Improved readability */
     color: #333;
     background: white;
     max-width: 210mm;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     min-height: 100vh;
 }
@@ -175,6 +175,12 @@ section {
     font-weight: 500;
 }
 
+/* Prevent long URLs from overflowing */
+.contact-item a, .experience-company a {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
 /* Experience Section */
 .experience {
     margin-bottom: 12px;
@@ -193,11 +199,12 @@ section {
 
 .experience-date {
     font-size: 9px;
-    color: #95a5a6;
+    color: #2c3e50; /* Increased contrast */
     font-weight: 600;
-    background: #ecf0f1;
+    background: #e2e8f0; /* Better grayscale print */
     padding: 2px 6px;
-    border-radius: 8px;
+    border-radius: 6px;
+    line-height: 1.2;
 }
 
 .experience-company {
@@ -217,7 +224,7 @@ section {
 
 .experience-summary {
     font-size: 10px;
-    line-height: 1.5;
+    line-height: 1.4; /* Adjusted for new base line-height */
     margin-bottom: 6px;
     color: #34495e;
     font-weight: 500;
@@ -343,40 +350,17 @@ section {
 }
 
 /* Print optimizations */
+@page { size: A4; margin: 12mm 14mm; }
 @media print {
-    body {
-        font-size: 9px;
-        padding: 15mm;
-    }
-
-    .header h1 {
-        font-size: 24px;
-    }
-
-    .header h2 {
-        font-size: 14px;
-    }
-
-    section h3 {
-        font-size: 12px;
-    }
-
-    /* Ensure sections can break across pages but individual items stay together */
-    section {
-        break-inside: auto;
-    }
-
+    body { font-size: 9px; padding: 0; }
+    .resume-container { box-shadow: none; }
+    .header h1 { font-size: 20px; }
+    .header h2 { font-size: 12px; }
+    section h3 { font-size: 11px; }
+    section { break-inside: auto; }
     .experience-item,
     .education-item,
-    .reference-item {
-        page-break-inside: avoid;
-        break-inside: avoid;
-    }
-
-    .profile-photo {
-        width: 70px;
-        height: 70px;
-    }
+    .reference-item { page-break-inside: avoid; break-inside: avoid; }
 }
 
 /* Responsive adjustments */

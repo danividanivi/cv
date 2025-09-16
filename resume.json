@@ -9,7 +9,7 @@
     "image": "https://github.com/danividanivi.png",
     "email": "danividanivi@gmail.com",
     "phone": "+41 77 277 91 18",
-  "summary": "Senior C++ Software Engineer specializing in aerospace, air traffic management, and embedded systems. Delivers robust, high‑performance solutions for mission‑critical applications with a strong background in system integration and modern software practices. Proven track record across defense, surveying, and advanced imaging systems.",
+    "summary": "Senior C++ Software Engineer specializing in aerospace, air traffic management, and embedded systems. Delivers robust, high‑performance solutions for mission‑critical applications with a strong background in system integration and modern software practices. Proven track record across defense, surveying, and advanced imaging systems.",
     "location": {
       "countryCode": "CH",
       "city": "Rorschach",
@@ -33,14 +33,14 @@
     {
       "name": "Darwin Recruitment - Hexagon",
       "position": "Embedded Software Engineer (Contractor)",
-      "startDate": "2025-01-02",
+      "startDate": "2025-01",
       "summary": "Embedded Software Engineer at Hexagon Productization Center, developing hybrid airborne sensor systems for advanced imaging and data acquisition.",
       "highlights": [
-        "Developed the MultiMapper hybrid sensor system integrating 11 RGB and 2 NIR cameras with LiDAR to simultaneously collect multi‑spectral imagery and 3D point clouds for large‑area mapping, achieving superior data consistency through advanced sensor synchronization",
-        "Developed camera firmware (image acquisition and processing algorithms) for 11 RGB and 2 NIR cameras, ensuring precise time synchronization to deliver reliable raw and processed TIFF images for multi‑spectral mapping, using C++",
+        "Developed the MultiMapper hybrid sensor system integrating 11 RGB and 2 NIR cameras with LiDAR to simultaneously collect multi-spectral imagery and 3D point clouds for large-area mapping, achieving superior data consistency through advanced sensor synchronization",
+        "Developed camera firmware (image acquisition and processing algorithms) for 11 RGB and 2 NIR cameras, ensuring precise time synchronization to deliver reliable raw and processed TIFF images for multi-spectral mapping, using C++",
         "Developed LiDAR firmware including digital signal processing, motor synchronization, and positioning, ensuring precise timing to generate accurate 3D point clouds for terrain modeling and hydrographic mapping, using C++",
         "Performed comprehensive testing and validation of the 20 kg MultiMapper system, ensuring reliable airborne performance via rigorous unit testing (gtest) and integration testing (pytest) on Embedded Linux platforms",
-        "Optimized system architecture for Zynq UltraScale+, collaborating with the FPGA team to deliver production‑ready firmware for mission‑critical surveying with improved efficiency and reduced power consumption, using Petalinux SDK"
+        "Optimized system architecture for Zynq UltraScale+, collaborating with the FPGA team to deliver production-ready firmware for mission-critical surveying with improved efficiency and reduced power consumption, using PetaLinux SDK"
       ],
       "url": "https://leica-geosystems.com/products/airborne-systems/hybrid-sensors",
       "location": "Heerbrugg, St. Gallen, Switzerland"
@@ -48,15 +48,15 @@
     {
       "name": "Akkodis - SAFRAN Vectronix",
       "position": "Embedded Software Developer (Consultant)",
-      "startDate": "2022-05-31",
-      "endDate": "2024-12-31",
+      "startDate": "2022-05",
+      "endDate": "2024-12",
       "summary": "Developed handheld image acquisition devices for SAFRAN Vectronix with emphasis on sensor integration, user interface, testing, and system validation.",
       "highlights": [
-        "Developed C++ firmware for the Nightwolf multi‑spectral targeting system, enabling situational awareness for special forces via SWIR capabilities that penetrate smoke and haze while achieving ±1.5 m accuracy over a 12 km range, using Qt for the UI on Embedded Linux",
-        "Integrated multi‑spectral sensors (daylight, thermal, low light, color CMOS, SWIR) for handheld image acquisition devices, ensuring reliable performance in extreme conditions through comprehensive testing with gtest and Robot Framework",
+        "Developed C++ firmware for the Nightwolf multi-spectral targeting system, enabling situational awareness for special forces via SWIR capabilities that penetrate smoke and haze while achieving ±1.5 m accuracy over a 12 km range, using Qt for the UI on Embedded Linux",
+        "Integrated multi-spectral sensors (daylight, thermal, low light, color CMOS, SWIR) for handheld image acquisition devices, ensuring reliable performance in extreme conditions through comprehensive testing with gtest and Robot Framework",
         "Implemented bidirectional real‑time video streaming and processing using GStreamer",
         "Developed augmented reality widgets to enhance user awareness, delivering advanced visualization using Qt Widgets",
-        "Validated functionality across multiple Embedded Linux platforms, delivering production‑ready software for mission‑critical operations using Petalinux SDK and Yocto"
+        "Validated functionality across multiple Embedded Linux platforms, delivering production-ready software for mission-critical operations using PetaLinux SDK and Yocto"
       ],
       "url": "https://www.safran-group.com/products-services/nightwolf-unique-handheld-multi-spectral-targeting-system",
       "location": "Heerbrugg, St Gallen, Switzerland"
@@ -64,8 +64,8 @@
     {
       "name": "Ad Maiorem Consulting - INDRA",
       "position": "ATC Software Developer (Consultant)",
-      "startDate": "2020-03-31",
-      "endDate": "2022-05-31",
+      "startDate": "2020-03",
+      "endDate": "2022-05",
       "summary": "Built and maintained surveillance software for INDRA Air Traffic Control systems, supporting SACTA and iTEC alliance members in mission‑critical environments.",
       "highlights": [
         "Maintained and modernized legacy surveillance software in Ada, achieving zero production crashes while delivering new features through systematic refactoring and optimization",
@@ -79,8 +79,8 @@
     {
       "name": "Pildo Labs",
       "position": "Aerospace Engineer",
-      "startDate": "2017-10-31",
-      "endDate": "2020-02-28",
+      "startDate": "2017-10",
+      "endDate": "2020-02",
       "summary": "Designed and developed coordination systems for manned and unmanned aircraft, including air navigation and ADS‑B/GNSS acquisition solutions for aerospace initiatives.",
       "highlights": [
         "Designed coordination systems for aerial surveillance and firefighting, enabling 24/7 monitoring and extending operations beyond sunset through simultaneous management of manned and unmanned aircraft",
@@ -94,8 +94,8 @@
     {
       "name": "EUROCONTROL",
       "position": "Trainee",
-      "startDate": "2017-03-31",
-      "endDate": "2017-12-31",
+      "startDate": "2017-03",
+      "endDate": "2017-12",
       "summary": "Conducted Pan‑European studies on continuous climb/descent operations, managed ADS‑B data, and validated tools and configurations for air traffic research.",
       "highlights": [
         "Contributed to the 2018 ECAC‑wide study on continuous climb/descent operations that identified €150M potential annual fuel savings across European airspace by fixing and validating required Java tools",
@@ -109,8 +109,8 @@
       "_comment": "Communications Trainee - Archived as less relevant for current career focus",
       "name": "Universitat Politècnica de Catalunya",
       "position": "Communications Trainee",
-      "startDate": "2016-09-30",
-      "endDate": "2017-02-28",
+      "startDate": "2016-09",
+      "endDate": "2017-02",
       "summary": "Managed web, email, and social networks for the student association, enhancing digital communication and engagement.",
       "url": "https://www.linkedin.com/school/universitat-politecnica-de-catalunya/",
       "location": "Castelldefels, Barcelona, Spain"
@@ -120,8 +120,8 @@
       "_comment": "Android Developer - Archived as less relevant for current embedded systems focus",
       "name": "Born Positiu S.L.",
       "position": "Android Developer",
-      "startDate": "2016-02-28",
-      "endDate": "2016-09-30",
+      "startDate": "2016-02",
+      "endDate": "2016-09",
       "summary": "Developed a driving support system, including GPS and RTK training modules for mobile platforms.",
       "highlights": [
         "Android app developed in Java with extensive use of Google Maps API and location services"
@@ -133,8 +133,8 @@
     {
       "organization": "Club Waterpolo Lugo",
       "position": "President",
-      "startDate": "2018-04-30",
-      "endDate": "2020-12-31",
+      "startDate": "2018-04",
+      "endDate": "2020-12",
       "summary": "Founder and first president of Club Waterpolo Lugo.",
       "highlights": [
         "Founded and led Club Waterpolo Lugo from inception to recognition as a sports entity, growing from 0 to 100+ members across 4 competitive teams (men's, women's, and 2 youth categories) within 2 years through strategic sponsorship acquisition, operational management, and local sport promotion"
@@ -150,8 +150,8 @@
       "courses": [
         "Specialized in Air Navigation Engineering with a focus on aerospace principles, flight dynamics, avionics, and air traffic management systems."
       ],
-      "startDate": "2012-09-15",
-      "endDate": "2017-06-31"
+      "startDate": "2012-09",
+      "endDate": "2017-06"
     },
     {
       "institution": "Universidade de Santiago de Compostela",
@@ -160,8 +160,8 @@
       "courses": [
         "Specialized in unmanned aerial systems design, operations, regulations, airspace integration, and advanced avionics for drones."
       ],
-      "startDate": "2018-09-15",
-      "endDate": "2019-06-31"
+      "startDate": "2018-09",
+      "endDate": "2019-06"
     }
   ],
   "skills": [

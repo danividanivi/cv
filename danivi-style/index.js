@@ -3,6 +3,9 @@ const path = require('path');
 const Handlebars = require('handlebars');
 
 // Register Handlebars helpers for date formatting
+Handlebars.registerHelper('not', function(value) {
+  return !value;
+});
 Handlebars.registerHelper('monthName', function(dateString) {
   if (!dateString) return '';
   const date = new Date(dateString);
@@ -20,57 +23,28 @@ Handlebars.registerHelper('year', function(dateString) {
 });
 
 Handlebars.registerHelper('highlightSkills', function(text, skills) {
-  if (!text) return '';
-  if (!skills || skills.length === 0) return text;
+  if (!text || !skills) return text || '';
 
-    // Collect all keywords from skills, excluding archived ones
-  const keywords = [];
-  skills.forEach(skill => {
-    if (skill.keywords) {
-      skill.keywords.forEach(keyword => {
-        // Skip archived skills
-        if (keyword !== "Ada" && keyword !== "RTK") {
-          keywords.push(keyword);
-        }
-      });
-    }
+  // Collect distinct keywords (case-sensitive) excluding deprecated ones
+  const exclude = new Set(['Ada', 'RTK']);
+  const set = new Set();
+  skills.forEach(s => (s.keywords || []).forEach(k => { if (!exclude.has(k)) set.add(k); }));
+
+  if (set.size === 0) return text;
+
+  // Sort by length desc to avoid shorter tokens wrapping inside longer ones
+  const ordered = Array.from(set).sort((a,b)=> b.length - a.length);
+
+  // Build a single regex of alternations with word boundaries where safe
+  const parts = ordered.map(k => {
+    const escaped = k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // If purely alnum/+/# etc treat as whole word; else just exact literal
+    return /^[A-Za-z0-9_.+#+-]+$/.test(k) ? `\\b${escaped}\\b` : escaped;
   });
 
-  // Add common abbreviations/variants that should map to main keywords
-  const keywordMappings = {
-    'gtest': 'GoogleTest'
-  };
+  const regex = new RegExp(`(${parts.join('|')})`, 'g');
 
-  // Apply mappings and remove duplicates
-  const mappedKeywords = keywords.map(keyword => keywordMappings[keyword] || keyword);
-  const uniqueKeywords = [...new Set(mappedKeywords)].sort((a, b) => b.length - a.length);
-
-  // Replace matching words with bold
-  let highlighted = text;
-  uniqueKeywords.forEach(keyword => {
-    // Handle different types of keywords
-    if (keyword.includes('/')) {
-      // For keywords with slashes like "Github/Gitlab CI/CD", try to match parts
-      const parts = keyword.split('/').map(part => part.trim());
-      parts.forEach(part => {
-        if (part && part.length > 2) { // Only match meaningful parts
-          const escapedPart = part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-          const partRegex = new RegExp(`\\b${escapedPart}\\b`, 'gi');
-          highlighted = highlighted.replace(partRegex, `<strong>$&</strong>`);
-        }
-      });
-    } else {
-      // For regular keywords
-      const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      // Use word boundaries for alphanumeric keywords, but allow partial matches for special chars
-      const regex = keyword.match(/^[a-zA-Z0-9\s]+$/) 
-        ? new RegExp(`\\b${escapedKeyword}\\b`, 'gi')
-        : new RegExp(escapedKeyword.replace(/\s+/g, '\\s+'), 'gi');
-      highlighted = highlighted.replace(regex, `<strong>$&</strong>`);
-    }
-  });
-
-  return highlighted;
+  return text.replace(regex, (m) => `<strong>${m}</strong>`);
 });
 
 function render(resume) {
