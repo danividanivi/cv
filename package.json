@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "generate:txt": "node generate-txt.js"
+    "generate:txt": "node generate-txt.js",
+    "format": "prettier --write \"**/*.{js,json,css,md,hbs}\""
   },
   "dependencies": {
     "jsonresume-theme-cora": "^0.1.1",
@@ -12,6 +13,7 @@
     "resume-cli": "^3.1.2"
   },
   "devDependencies": {
+    "prettier": "^3.6.2",
     "puppeteer": "^24.21.0"
   }
 }
