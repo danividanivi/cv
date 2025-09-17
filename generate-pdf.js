@@ -1,16 +1,10 @@
-const puppeteer = require('puppeteer');
+const { execSync } = require('child_process');
 
-(async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto('file://' + __dirname + '/index.html');
-  await page.pdf({
-    path: 'resume.pdf',
-    format: 'A4',
-    printBackground: true,
-    margin: { top: 0, right: 0, bottom: 0, left: 0 },
-    preferCSSPageSize: true,
-  });
-  await browser.close();
+console.log('Generating PDF using resume-cli (matching GitHub Actions)...');
+try {
+  execSync('npx resume-cli export resume.pdf --theme danivi-style --format pdf', { stdio: 'inherit' });
   console.log('PDF generated successfully at resume.pdf');
-})();
+} catch (error) {
+  console.error('Error generating PDF:', error.message);
+  process.exit(1);
+}
