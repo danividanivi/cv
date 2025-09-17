@@ -23,7 +23,6 @@ body {
 }
 
 .resume-container {
-  display: flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -33,13 +32,15 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 25%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52.5mm; /* 25% of 210mm */
+  height: 100%;
   background: linear-gradient(135deg, #5d6d8a, #4a5d7a);
   color: white;
-  padding: 8px 8px 8px 8px;
+  padding: 8px;
   box-sizing: border-box;
-  min-height: 100%;
-  margin: 0;
 }
 
 /* Ensure gradient bleed doesn't cause horizontal scroll in PDF context */
@@ -62,9 +63,13 @@ body {
 
 /* Main Content Area */
 .main-content {
+  position: absolute;
+  left: 52.5mm; /* after sidebar */
+  top: 0;
+  width: 157.5mm; /* 75% of 210mm */
+  height: 100%;
   background: white;
   color: #333;
-  width: 75%;
   padding: 8px;
   box-sizing: border-box;
   min-height: 100vh;
