@@ -47,13 +47,8 @@ jobs:
 
     - name: Export PDF
       run: |
-        echo "Setting up puppeteer configuration..."
-        export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
-        export PUPPETEER_EXECUTABLE_PATH=$(which google-chrome-stable || which chromium-browser || which chromium || echo "")
-        echo "Puppeteer executable: $PUPPETEER_EXECUTABLE_PATH"
         echo "Starting PDF generation..."
-        export PUPPETEER_ARGS='--no-sandbox,--disable-setuid-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-web-security,--disable-features=VizDisplayCompositor'
-        npx resume-cli export resume.pdf --theme danivi-style --format pdf
+        node generate-pdf.js
         echo "PDF generation completed"
         ls -la resume.pdf
         if [ -f resume.pdf ]; then
@@ -62,9 +57,6 @@ jobs:
           echo "PDF file was not created!"
           exit 1
         fi
-      env:
-        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 1
-        PUPPETEER_ARGS: --no-sandbox,--disable-setuid-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-web-security,--disable-features=VizDisplayCompositor
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
