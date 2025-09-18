@@ -36,10 +36,10 @@
       "startDate": "2025-01",
       "summary": "Developing hybrid airborne sensor systems for advanced imaging and data acquisition.",
       "highlights": [
-        "Developed the MultiMapper hybrid sensor system to simultaneously collect multi-spectral imagery and 3D point clouds for large-area mapping, achieving superior data consistency, via integrating 11 RGB and 2 NIR cameras with LiDAR through advanced sensor synchronization",
-        "Developed camera and LiDAR firmware to generate accurate multi-spectral TIFF images and 3D point clouds for mapping and terrain modeling, ensuring precise time synchronization, using C++ and implementing image acquisition and processing algorithms, digital signal processing, motor synchronization, and positioning",
-        "Performed comprehensive testing and validation of the 20 kg MultiMapper system, ensuring reliable airborne performance, via rigorous unit testing (Google Test) and integration testing (pytest) on Embedded Linux platforms",
-        "Optimized system architecture for Zynq UltraScale+, delivering production-ready firmware for mission-critical surveying with improved efficiency and reduced power consumption, collaborating with the FPGA team using PetaLinux SDK"
+        "Developed the MultiMapper hybrid sensor system to simultaneously collect multi-spectral imagery and 3D point clouds for large-area mapping, achieving superior data consistency, combining 11 RGB and 2 NIR cameras with LiDAR",
+        "Developed firmware to generate accurate multi-spectral TIFF images and 3D point clouds for mapping and terrain modeling, ensuring precise synchronization, using C++ and implementing image acquisition and processing algorithms",
+        "Performed comprehensive testing and validation of the system, ensuring reliable airborne performance, via rigorous unit testing (Google Test) and integration testing (pytest)",
+        "Optimized system architecture for Zynq UltraScale+, reducing power consumption by half and increasing framerate from 0.5 to 4.5 frames per second, by doing changes in the FPGA, firmware and PetaLinux build"
       ],
       "url": "https://leica-geosystems.com/products/airborne-systems/hybrid-sensors",
       "location": "Heerbrugg, St. Gallen, Switzerland"
@@ -49,13 +49,13 @@
       "position": "Embedded Software Developer (Consultant)",
       "startDate": "2022-05",
       "endDate": "2024-12",
-      "summary": "Developed military-grade handheld image acquisition devices, with emphasis on sensor integration, user interface, testing, and system validation.",
+      "summary": "Developed military-grade handheld image acquisition devices.",
       "highlights": [
         "Developed firmware for the Nightwolf multi-spectral targeting system, enabling situational awareness for special forces via SWIR capabilities that penetrate smoke and haze while achieving ±1.5 m accuracy over a 12 km range, leveraging C++ and Qt Framework running on Embedded Linux",
         "Integrated multi-spectral sensors (daylight, thermal, low light, color CMOS, SWIR) for handheld image acquisition devices, ensuring reliable performance in extreme conditions, via comprehensive testing with Google Test and Robot Framework",
         "Implemented bidirectional real‑time video streaming and processing, enabling low-latency data transmission for enhanced targeting and situational awareness, using GStreamer",
-        "Developed augmented reality widgets to enhance user awareness, delivering advanced visualization, with Qt Widgets",
-        "Validated functionality across multiple Embedded Linux platforms, delivering production-ready software for mission-critical operations, employing PetaLinux SDK and Yocto"
+        "Developed Augmented Reality widgets to enhance user awareness and interaction, delivering advanced visualization and UI, by using Qt Widgets",
+        "Validated functionality across multiple Embedded Linux platforms, delivering production-ready software for mission-critical operations, employing PetaLinux Tools and Yocto"
       ],
       "url": "https://www.safran-group.com/products-services/nightwolf-unique-handheld-multi-spectral-targeting-system",
       "location": "Heerbrugg, St Gallen, Switzerland"
@@ -65,10 +65,10 @@
       "position": "ATC Software Developer (Consultant)",
       "startDate": "2020-03",
       "endDate": "2022-05",
-      "summary": "Built and maintained surveillance software for Air Traffic Control systems, supporting SACTA and iTEC alliance members in mission‑critical environments.",
+      "summary": "Built and maintained surveillance software for Air Traffic Control systems.",
       "highlights": [
         "Maintained and modernized legacy surveillance software in Ada, achieving zero production crashes while delivering new features, applying systematic refactoring and optimization",
-        "Implemented ADS‑B as a new data source, providing more accurate second‑by‑second position data and expanding tracking coverage in non‑radar airspace; reduced ground infrastructure costs by at least 90% versus traditional radar, developing C++ components integrated with the existing Ada codebase",
+        "Implemented ADS‑B as a new data source, providing accurate second‑by‑second position and expanding tracking coverage in non‑radar airspace; reduced ground infrastructure costs by at least 90% versus traditional radar, developing C++ components complementing existing Ada codebase",
         "Developed C++ components for new Air Traffic Control systems, achieving 99.9% uptime for safety‑critical operations supporting SACTA and iTEC alliance members, through rigorous testing and integration",
         "Ensured reliability in mission‑critical environments, achieving zero production incidents over a 24‑month deployment across multiple European ATC systems, via comprehensive testing and proactive monitoring"
       ],
@@ -80,7 +80,7 @@
       "position": "Aerospace Engineer",
       "startDate": "2017-10",
       "endDate": "2020-02",
-      "summary": "Designed and developed coordination systems for manned and unmanned aircraft, including air navigation and ADS‑B/GNSS acquisition solutions for aerospace initiatives.",
+      "summary": "Designed and developed coordination systems for manned/unmanned aircraft, including navigation and ADS‑B/GNSS solutions.",
       "highlights": [
         "Designed coordination systems for aerial surveillance and firefighting, enabling 24/7 monitoring and extending operations beyond sunset, through simultaneous management of manned and unmanned aircraft",
         "Developed airborne navigation and communication software for a 25 kg UAV and manned helicopters, ensuring compliance with DO‑178 and ED‑12 certification standards for autonomous flight operations, with C++",
@@ -95,7 +95,7 @@
       "position": "Trainee",
       "startDate": "2017-03",
       "endDate": "2017-12",
-      "summary": "Conducted Pan‑European studies on continuous climb/descent operations, managed ADS‑B data, and validated tools and configurations for air traffic research.",
+      "summary": "Validated tools and conducted studies for air traffic research.",
       "highlights": [
         "Contributed to the 2018 ECAC‑wide study on continuous climb/descent operations, identifying €150M potential annual fuel savings across European airspace, through fixing and validating required Java tools",
         "Analyzed a full year of European air traffic ADS‑B data, processing millions of flights to provide actionable insights for Pan‑European optimization studies, using advanced filtering and analysis"
@@ -121,7 +121,7 @@
       "position": "Android Developer",
       "startDate": "2016-02",
       "endDate": "2016-09",
-      "summary": "Developed a driving support system, including GPS and RTK training modules for mobile platforms.",
+      "summary": "Developed a driving support application.",
       "highlights": [
         "Developed an Android app in Java, delivering a comprehensive driving support system with GPS and RTK training modules for mobile platforms, via extensive Google Maps API and location services"
       ],
@@ -143,7 +143,7 @@
   ],
   "education": [
     {
-      "institution": "Universitat Politècnica de Catalunya · BarcelonaTech (UPC)",
+      "institution": "Universitat Politècnica de Catalunya",
       "area": "Aerospace Engineering",
       "studyType": "Bachelor's Degree",
       "courses": [
@@ -167,18 +167,18 @@
     {
       "name": "Programming Languages & Frameworks",
       "level": "Expert",
-      "keywords": ["C++", "Qt", "CMake", "Google Test", "Python", "pytest", "GStreamer"]
+      "keywords": ["C++", "Qt", "CMake", "Google Test", "GStreamer", "Python", "pytest"]
     },
     {
       "name": "Software Development & Methodologies",
       "level": "Expert",
       "keywords": [
-        "Scrum",
-        "Jira",
         "Git",
+        "GitHub/GitLab CI/CD",
         "Unit/Integration Testing",
         "Robot Framework",
-        "GitHub/GitLab CI/CD",
+        "Scrum",
+        "Jira",
         "AI-Assisted Development"
       ]
     },
@@ -187,24 +187,27 @@
       "level": "Advanced",
       "keywords": [
         "Embedded Linux",
-        "Yocto Project",
         "PetaLinux",
+        "Yocto Project",
+        "Zynq UltraScale+",
         "Firmware Development",
         "Software Validation",
-        "Systems Integration",
-        "Zynq UltraScale+"
+        "Systems Integration"
       ]
     },
     {
-      "name": "Air Traffic & Aerospace",
+      "name": "Aviation & Aerospace",
       "level": "Advanced",
       "keywords": [
+        "Communications",
+        "Navigation",
+        "Surveillance",
+        "ATM",
         "Air Traffic Control",
         "ADS‑B",
         "RADAR",
         "GNSS",
-        "Unmanned Aerial Vehicle (UAV)",
-        "Aviation",
+        "UAVs",
         "Systems Engineering"
       ]
     },
