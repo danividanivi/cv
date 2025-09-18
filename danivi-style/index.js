@@ -44,16 +44,29 @@ Handlebars.registerHelper('highlightSkills', function (text, skills) {
     })
   );
 
-  if (set.size === 0) return text;
+  // Add synonyms
+  const synonyms = {
+    "Air Traffic Control": ["ATC"],
+    "Yocto Project": ["Yocto"],
+    "Google Test": ["gtest"]
+  };
+  const newSet = new Set(set);
+  set.forEach((k) => {
+    if (synonyms[k]) {
+      synonyms[k].forEach((syn) => newSet.add(syn));
+    }
+  });
+
+  if (newSet.size === 0) return text;
 
   // Sort by length desc to avoid shorter tokens wrapping inside longer ones
-  const ordered = Array.from(set).sort((a, b) => b.length - a.length);
+  const ordered = Array.from(newSet).sort((a, b) => b.length - a.length);
 
   // Build a single regex of alternations with word boundaries where safe
   const parts = ordered.map((k) => {
     const escaped = k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    // If purely alnum/+/# etc treat as whole word; else just exact literal
-    return /^[A-Za-z0-9_.+#+-]+$/.test(k) ? `\\b${escaped}\\b` : escaped;
+    // If purely alnum and _ , treat as whole word; else just exact literal
+    return /^[A-Za-z0-9_]+$/.test(k) ? `\\b${escaped}\\b` : escaped;
   });
 
   const regex = new RegExp(`(${parts.join('|')})`, 'g');
