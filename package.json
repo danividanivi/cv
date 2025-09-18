@@ -1,6 +1,7 @@
 {
   "scripts": {
     "generate:txt": "node generate-txt.js",
+    "generate:pdf": "node generate-pdf.js",
     "format": "prettier --write \"**/*.{js,json,css,md,hbs}\""
   },
   "dependencies": {
@@ -9,7 +10,8 @@
     "jsonresume-theme-even": "^0.26.0",
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-straightforward": "^0.2.0",
-    "resumed": "^6.0.0"
+    "resumed": "^6.0.0",
+    "puppeteer": "^24.22.0"
   },
   "devDependencies": {
     "prettier": "^3.6.2"

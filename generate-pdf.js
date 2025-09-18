@@ -1,10 +1,46 @@
-const { execSync } = require('child_process');
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const puppeteer = require('puppeteer');
+const { render } = require('./danivi-style');
 
-console.log('Generating PDF using resumed (matching GitHub Actions)...');
-try {
-  execSync('PUPPETEER_DISABLE_SANDBOX=1 PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-seccomp-filter-sandbox" ./node_modules/.bin/resumed export resume.json --theme jsonresume-theme-danivi-style --output resume.pdf', { stdio: 'inherit' });
+async function main() {
+  console.log('Generating PDF using direct Puppeteer...');
+  const resumePath = path.join(process.cwd(), 'resume.json');
+  const raw = fs.readFileSync(resumePath, 'utf8');
+  const resume = JSON.parse(raw);
+
+  // Render HTML through the theme to match resumed output
+  const html = render(resume);
+  const tempFile = path.join(process.cwd(), 'resume-temp.html');
+  fs.writeFileSync(tempFile, html, 'utf8');
+
+  const args = [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+    '--disable-gpu',
+    '--single-process',
+    '--no-zygote',
+  ];
+
+  const browser = await puppeteer.launch({ headless: 'new', args });
+  const page = await browser.newPage();
+  await page.goto('file://' + tempFile, { waitUntil: 'networkidle0' });
+
+  await page.pdf({
+    path: 'resume.pdf',
+    format: 'A4',
+    printBackground: true,
+    margin: { top: '12mm', bottom: '12mm', left: '12mm', right: '12mm' },
+  });
+
+  await browser.close();
+  fs.unlinkSync(tempFile);
   console.log('PDF generated successfully at resume.pdf');
-} catch (error) {
-  console.error('Error generating PDF:', error.message);
-  process.exit(1);
 }
+
+main().catch((err) => {
+  console.error('Error generating PDF:', err);
+  process.exit(1);
+});

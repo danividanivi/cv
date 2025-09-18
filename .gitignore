@@ -4,6 +4,14 @@ node_modules
 index.html
 resume.pdf
 resume.txt
+resume.pdf.sha256
+
+# Docker related local artifacts
+*.log
+*.cache
+.DS_Store
+dist/
+*.tmp
 
 # Test PDF files
 test_*.pdf

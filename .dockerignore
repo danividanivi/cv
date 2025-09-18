@@ -1,0 +1,8 @@
+node_modules
+resume.pdf
+resume.txt
+*.log
+.git
+.github
+Dockerfile
+docker-generate.sh

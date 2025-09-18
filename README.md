@@ -84,3 +84,48 @@ To merge dependency updates:
 2. Check if any breaking changes are introduced
 3. Test the build locally if needed
 4. Merge the pull request
+
+## Reproducible Docker Build
+
+For byte-stable (or near byte-stable) outputs across local and CI, a Docker image is provided.
+
+### Quick Usage
+
+```sh
+./docker-generate.sh
+```
+
+Artifacts produced in the repo root:
+
+- `index.html`
+- `resume.pdf`
+- `resume.txt`
+- `resume.pdf.sha256` (checksum)
+
+These artifacts are `.gitignore`d; regenerate them rather than committing.
+
+### Manual Docker Commands
+
+```sh
+docker build -t cv-resume:latest .
+docker run --name cv-build cv-resume:latest
+docker cp cv-build:/app/index.html index.html
+docker cp cv-build:/app/resume.pdf resume.pdf
+docker cp cv-build:/app/resume.txt resume.txt
+docker cp cv-build:/app/resume.pdf.sha256 resume.pdf.sha256
+docker rm cv-build
+sha256sum -c resume.pdf.sha256 # optional verify
+```
+
+### Why Docker?
+
+- Fixed Node version & Debian base layer
+- Pinned dependency tree via `package-lock.json`
+- Pre-fetched Chromium matching Puppeteer version
+- Consistent fonts & timezone (UTC)
+
+### Notes
+
+- Exact PDF bytes can still change if you update dependencies, base image tag, or Puppeteer/Chromium.
+- To maximize determinism: avoid rebuilding with a moving base tag; consider pinning a digest of the base image.
+- Prefer the Docker path for CI parity; the legacy raw Node instructions are for quick local experimentation.

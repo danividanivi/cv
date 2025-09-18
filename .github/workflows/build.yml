@@ -12,79 +12,31 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+      - name: Build Docker image
+        run: docker build -t cv-resume:latest .
 
-    - name: Install runtime libraries for headless Chromium
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-          fonts-liberation \
-          libasound2t64 \
-          libatk1.0-0 \
-          libcups2 \
-          libdrm2 \
-          libxkbcommon0 \
-          libxcomposite1 \
-          libxdamage1 \
-          libxfixes3 \
-          libxrandr2 \
-          libxshmfence1 \
-          libgbm1 \
-          libgtk-3-0 \
-          libnss3 \
-          libxss1 \
-          libxext6 \
-          libx11-6 \
-          libxtst6 \
-          fonts-noto-color-emoji
+      - name: Generate artifacts (Docker)
+        run: |
+          docker run --name cv-build cv-resume:latest
+          docker cp cv-build:/app/index.html index.html
+          docker cp cv-build:/app/resume.pdf resume.pdf
+          docker cp cv-build:/app/resume.txt resume.txt
+          docker cp cv-build:/app/resume.pdf.sha256 resume.pdf.sha256
+          docker rm cv-build
+          ls -l index.html resume.pdf resume.txt resume.pdf.sha256
+          echo "Checksum:" && cat resume.pdf.sha256
 
-    - name: Install project dependencies
-      run: |
-        npm ci
-        npm install ./danivi-style
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-    - name: Export HTML
-      run: |
-        echo "Exporting HTML..."
-        npx resumed render resume.json --theme jsonresume-theme-danivi-style --output index.html
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
 
-    - name: Export PDF
-      env:
-        PUPPETEER_DISABLE_SANDBOX: '1'
-        PUPPETEER_LAUNCH_ARGS: '--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu --single-process --no-zygote'
-      run: |
-        echo "Starting PDF generation..."
-        node generate-pdf.js
-        echo "PDF generation completed"
-        ls -la resume.pdf
-        if [ -f resume.pdf ]; then
-          echo "PDF file exists and has size: $(stat -c%s resume.pdf) bytes"
-        else
-          echo "PDF file was not created!"
-          exit 1
-        fi
-
-    - name: Generate checksum
-      run: |
-        if [ ! -f resume.pdf ]; then echo "resume.pdf missing before checksum"; exit 1; fi
-        sha256sum resume.pdf | tee resume.pdf.sha256
-        echo "Checksum:" && cat resume.pdf.sha256
-
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: .
-
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
