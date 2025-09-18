@@ -9,11 +9,9 @@
     "jsonresume-theme-even": "^0.26.0",
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-straightforward": "^0.2.0",
-    "jsonresume-theme-waterfall": "^1.0.2",
-    "resume-cli": "^3.1.2"
+    "resumed": "^6.0.0"
   },
   "devDependencies": {
-    "prettier": "^3.6.2",
-    "puppeteer": "^24.21.0"
+    "prettier": "^3.6.2"
   }
 }

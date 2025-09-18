@@ -16,13 +16,14 @@ _Note: If links don't work immediately, the GitHub Actions deployment may still 
 To build locally:
 
 ```sh
-npm install -g resume-cli
-npm install puppeteer
+npm install -g resumed
 npm install ./danivi-style
-resume export index.html --theme danivi-style
-resume export resume.pdf --theme danivi-style --format pdf
+resumed render resume.json --theme jsonresume-theme-danivi-style --output index.html
+resumed export resume.json --theme jsonresume-theme-danivi-style --output resume.pdf
 npm run generate:txt # produces resume.txt (plain text / ATS friendly)
 ```
+
+**Note:** With resumed, you need to reference your local theme using its full package name `jsonresume-theme-danivi-style` rather than just `danivi-style`.
 
 ### Plain Text Export
 
@@ -68,7 +69,6 @@ This repository uses [Dependabot](https://docs.github.com/en/code-security/depen
 - **Strategy**:
   - Creates pull requests for minor and patch updates
   - Ignores major version updates (requires manual review)
-  - Special handling for `puppeteer` (major updates ignored)
 - **Labels**: Automatically adds `dependencies` and `automated` labels
 - **Commit messages**: Prefixed with `deps` or `deps-dev`
 
