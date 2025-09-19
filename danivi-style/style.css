@@ -237,7 +237,7 @@ section {
 }
 
 .experience-summary {
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.4; /* Adjusted for new base line-height */
   margin-bottom: 6px;
   color: #34495e;
@@ -289,6 +289,11 @@ section {
   font-size: 9px;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
+}
+
+.education-institution a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
 }
 
 /* Languages Section in Sidebar */

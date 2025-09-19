@@ -80,7 +80,7 @@
       "position": "Aerospace Engineer",
       "startDate": "2017-10",
       "endDate": "2020-02",
-      "summary": "Designed and developed coordination systems for manned/unmanned aircraft, including navigation and ADS‑B/GNSS solutions.",
+      "summary": "Designed and developed coordination systems enabling manned and unmanned aircraft to operate collaboratively.",
       "highlights": [
         "Designed coordination systems for aerial surveillance and firefighting, enabling 24/7 monitoring and extending operations beyond sunset, through simultaneous management of manned and unmanned aircraft",
         "Developed airborne navigation and communication software for a 25 kg UAV and manned helicopters, ensuring compliance with DO‑178 and ED‑12 certification standards for autonomous flight operations, with C++",
@@ -146,6 +146,7 @@
       "institution": "Universitat Politècnica de Catalunya",
       "area": "Aerospace Engineering",
       "studyType": "Bachelor's Degree",
+      "url": "https://eetac.upc.edu/en/study/bachelors-deegrees/aerospace-systems-engineering-1",
       "courses": [
         "Specialized in Air Navigation Engineering with a focus on aerospace principles, flight dynamics, avionics, and air traffic management systems."
       ],
@@ -156,6 +157,7 @@
       "institution": "Universidade de Santiago de Compostela",
       "area": "Unmanned Aerial Systems Engineering and Operations",
       "studyType": "Master's Degree",
+      "url": "https://www.usc.gal/en/studies/masters/engineering-and-architecture/master-operations-and-unmanned-aircraft-systems-engineering",
       "courses": [
         "Specialized in unmanned aerial systems design, operations, regulations, airspace integration, and advanced avionics for drones."
       ],

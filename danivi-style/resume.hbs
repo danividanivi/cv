@@ -84,7 +84,7 @@
                         {{/if}}
                     </div>
                     <div class="education-degree">{{studyType}} in {{area}}</div>
-                    <div class="education-institution">{{institution}}</div>
+                    <div class="education-institution">{{#if url}}<a href="{{url}}" target="_blank">{{institution}}</a>{{else}}{{institution}}{{/if}}</div>
                 </div>
                 {{/each}}
             </section>
