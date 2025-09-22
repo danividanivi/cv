@@ -10,7 +10,7 @@
     "jsonresume-theme-even": "^0.26.0",
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-straightforward": "^0.2.0",
-    "resumed": "^6.0.0",
+    "resumed": "^6.1.0",
     "puppeteer": "^24.22.0"
   },
   "devDependencies": {
