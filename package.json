@@ -7,7 +7,7 @@
   "dependencies": {
     "jsonresume-theme-cora": "^0.1.1",
     "jsonresume-theme-danivi-style": "file:danivi-style",
-    "jsonresume-theme-even": "^0.26.0",
+    "jsonresume-theme-even": "^0.26.1",
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-straightforward": "^0.2.0",
     "resumed": "^6.1.0",
