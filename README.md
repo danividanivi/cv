@@ -1,6 +1,6 @@
 # CV
 
-My resume in JSON Resume format.
+My resume in JSON Resume format with multiple theme options.
 
 ## View
 
@@ -8,26 +8,53 @@ My resume in JSON Resume format.
 
 - [HTML](https://danividanivi.github.io/cv/)
 - [PDF](https://danividanivi.github.io/cv/resume.pdf)
+- [Extended PDF](https://danividanivi.github.io/cv/resume-2page.pdf) (single-page with full content)
 
 _Note: If links don't work immediately, the GitHub Actions deployment may still be in progress. You can also build locally using the instructions below._
+
+## Themes
+
+This repository includes two custom themes:
+
+### `danivi-style` (Original)
+- Compact one-page layout
+- Includes current work experience only
+- Traditional resume format
+
+### `danivi-long-style` (Extended)
+- Single-page extended layout with full content
+- Includes work experience, education, volunteer work, and references
+- Excludes archived jobs for focused presentation
+- Full-height sidebar with contact info and skills
+- Streamlined header with summary flowing directly after name/title
 
 ## Build Locally
 
 To build locally:
 
 ```sh
+# Install dependencies
 npm install -g resumed
 npm install ./danivi-style
+npm install ./danivi-long-style
+
+# Generate original one-page version
 resumed render resume.json --theme jsonresume-theme-danivi-style --output index.html
 resumed export resume.json --theme jsonresume-theme-danivi-style --output resume.pdf
-npm run generate:txt # produces resume.txt (plain text / ATS friendly)
+
+# Generate extended single-page version
+resumed render resume.json --theme jsonresume-theme-danivi-long-style --output index-extended.html
+resumed export resume.json --theme jsonresume-theme-danivi-long-style --output resume-2page.pdf
+
+# Generate plain text versions
+npm run generate:txt # produces resume.txt and resume-2page.txt (ATS friendly)
 ```
 
-**Note:** With resumed, you need to reference your local theme using its full package name `jsonresume-theme-danivi-style` rather than just `danivi-style`.
+**Note:** With resumed, you need to reference your local themes using their full package names `jsonresume-theme-danivi-style` and `jsonresume-theme-danivi-long-style`.
 
 ### Plain Text Export
 
-The repository includes a plain text generator (`generate-txt.js`) that creates `resume.txt` for ATS systems or quick copy/paste:
+The repository includes a plain text generator (`generate-txt.js`) that creates ATS-friendly versions:
 
 ```sh
 npm run generate:txt
@@ -97,10 +124,13 @@ For byte-stable (or near byte-stable) outputs across local and CI, a Docker imag
 
 Artifacts produced in the repo root:
 
-- `index.html`
-- `resume.pdf`
-- `resume.txt`
-- `resume.pdf.sha256` (checksum)
+- `index.html` (original theme)
+- `index-extended.html` (extended theme)
+- `resume.pdf` (original one-page)
+- `resume-2page.pdf` (extended single-page)
+- `resume.txt` (original plain text)
+- `resume-2page.txt` (extended plain text)
+- `resume.pdf.sha256` (checksum for original PDF)
 
 These artifacts are `.gitignore`d; regenerate them rather than committing.
 
@@ -110,8 +140,11 @@ These artifacts are `.gitignore`d; regenerate them rather than committing.
 docker build -t cv-resume:latest .
 docker run --name cv-build cv-resume:latest
 docker cp cv-build:/app/index.html index.html
+docker cp cv-build:/app/index-extended.html index-extended.html
 docker cp cv-build:/app/resume.pdf resume.pdf
+docker cp cv-build:/app/resume-2page.pdf resume-2page.pdf
 docker cp cv-build:/app/resume.txt resume.txt
+docker cp cv-build:/app/resume-2page.txt resume-2page.txt
 docker cp cv-build:/app/resume.pdf.sha256 resume.pdf.sha256
 docker rm cv-build
 sha256sum -c resume.pdf.sha256 # optional verify

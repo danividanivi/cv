@@ -3,15 +3,11 @@ const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
 const { render } = require('./danivi-style');
+const { render: renderLong } = require('./danivi-long-style');
 
-async function main() {
-  console.log('Generating PDF using direct Puppeteer...');
-  const resumePath = path.join(process.cwd(), 'resume.json');
-  const raw = fs.readFileSync(resumePath, 'utf8');
-  const resume = JSON.parse(raw);
-
-  // Render HTML through the theme to match resumed output
-  const html = render(resume);
+async function generatePDF(resume, outputPath, renderFunction) {
+  console.log(`Generating PDF at ${outputPath}...`);
+  const html = renderFunction(resume);
   const tempFile = path.join(process.cwd(), 'resume-temp.html');
   fs.writeFileSync(tempFile, html, 'utf8');
 
@@ -29,18 +25,32 @@ async function main() {
   await page.goto('file://' + tempFile, { waitUntil: 'networkidle0' });
 
   await page.pdf({
-    path: 'resume.pdf',
+    path: outputPath,
     format: 'A4',
     printBackground: true,
-    margin: { top: '12mm', bottom: '12mm', left: '12mm', right: '12mm' },
+    margin: { top: '0mm', bottom: '0mm', left: '0mm', right: '0mm' },
+    preferCSSPageSize: false,
+    displayHeaderFooter: false,
   });
 
   await browser.close();
   fs.unlinkSync(tempFile);
-  console.log('PDF generated successfully at resume.pdf');
+  console.log(`PDF generated successfully at ${outputPath}`);
+}
+
+async function main() {
+  const resumePath = path.join(process.cwd(), 'resume.json');
+  const raw = fs.readFileSync(resumePath, 'utf8');
+  const resume = JSON.parse(raw);
+
+  // Generate one-page version (current behavior)
+  await generatePDF(resume, 'resume.pdf', render);
+
+  // Generate extended single-page version (using long style theme)
+  await generatePDF(resume, 'resume-2page.pdf', renderLong);
 }
 
 main().catch((err) => {
-  console.error('Error generating PDF:', err);
+  console.error('Error generating PDFs:', err);
   process.exit(1);
 });

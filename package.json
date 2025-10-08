@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "generate": "npm run generate:txt && npm run generate:pdf",
     "generate:txt": "node generate-txt.js",
     "generate:pdf": "node generate-pdf.js",
     "format": "prettier --write \"**/*.{js,json,css,md,hbs}\""
@@ -7,6 +8,7 @@
   "dependencies": {
     "jsonresume-theme-cora": "^0.1.1",
     "jsonresume-theme-danivi-style": "file:danivi-style",
+    "jsonresume-theme-danivi-long-style": "file:danivi-long-style",
     "jsonresume-theme-even": "^0.26.1",
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-straightforward": "^0.2.0",
