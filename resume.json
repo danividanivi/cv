@@ -9,7 +9,7 @@
     "image": "https://github.com/danividanivi.png",
     "email": "danividanivi@gmail.com",
     "phone": "+41 77 277 91 18",
-    "summary": "Senior C++ Software Engineer specializing in aerospace, air traffic management, and embedded systems. Delivers robust, high‑performance solutions for mission‑critical applications with a strong background in system integration and modern software practices. Proven track record across defense, surveying, and advanced imaging systems.",
+    "summary": "Senior Embedded Software Engineer with 8+ years of experience in C++, Python, and Linux kernel development for mission‑critical embedded systems. Expert in cross‑compilation, performance optimization, driver development, and system services for embedded Linux distributions. Proven track record delivering autonomous systems solutions across aerospace, defense, and advanced imaging platforms with extensive experience in video streaming, networking protocols, and embedded hardware integration.",
     "location": {
       "countryCode": "CH",
       "city": "Rorschach",
@@ -169,7 +169,7 @@
     {
       "name": "Programming Languages & Frameworks",
       "level": "Expert",
-      "keywords": ["C++", "Qt", "CMake", "Google Test", "GStreamer", "Python", "pytest"]
+      "keywords": ["C++", "Qt", "CMake", "Google Test", "GStreamer", "Python", "pytest", "Bash"]
     },
     {
       "name": "Software Development & Methodologies",
@@ -181,6 +181,7 @@
         "Robot Framework",
         "Scrum",
         "Jira",
+        "Docker",
         "AI-Assisted Development"
       ]
     },
@@ -194,7 +195,23 @@
         "Zynq UltraScale+",
         "Firmware Development",
         "Software Validation",
-        "Systems Integration"
+        "Systems Integration",
+        "Device Drivers",
+        "Device Tree Configuration",
+        "Cross-compilation",
+        "Real‑time Systems"
+      ]
+    },
+    {
+      "name": "Hardware Integration & Communication Protocols",
+      "level": "Advanced",
+      "keywords": [
+        "I2C",
+        "SPI", 
+        "UART",
+        "CAN Bus",
+        "PCIe",
+        "Sensor Integration"
       ]
     },
     {
