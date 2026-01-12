@@ -13,7 +13,7 @@
     "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-straightforward": "^0.2.0",
     "resumed": "^6.1.0",
-    "puppeteer": "^24.33.0"
+    "puppeteer": "^24.35.0"
   },
   "devDependencies": {
     "prettier": "^3.6.2"
