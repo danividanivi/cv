@@ -34,8 +34,7 @@ WORKDIR /app
 # Copy only manifests first for layer caching
 COPY package.json package-lock.json ./
 COPY danivi-style/package.json ./danivi-style/package.json
-COPY danivi-long-style/package.json ./danivi-long-style/package.json
-RUN npm ci && npm install ./danivi-style && npm install ./danivi-long-style
+RUN npm ci && npm install ./danivi-style
 
 # Pre-fetch Chromium tied to pinned Puppeteer version for deterministic binary
 RUN node -e "require('puppeteer');"

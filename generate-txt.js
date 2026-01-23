@@ -115,9 +115,4 @@ function generateTXT(resume, outputPath, includeArchived = false) {
 }
 
 const resume = JSON.parse(fs.readFileSync('resume.json', 'utf8'));
-
-// Generate one-page version (current behavior)
 generateTXT(resume, 'resume.txt');
-
-// Generate two-page version (including archived entries)
-generateTXT(resume, 'resume-2page.txt', true);

@@ -21,11 +21,10 @@ jobs:
           docker run --name cv-build cv-resume:latest
           docker cp cv-build:/app/index.html index.html
           docker cp cv-build:/app/resume.pdf resume.pdf
-          docker cp cv-build:/app/resume-2page.pdf resume-2page.pdf
           docker cp cv-build:/app/resume.txt resume.txt
           docker cp cv-build:/app/resume.pdf.sha256 resume.pdf.sha256
           docker rm cv-build
-          ls -l index.html resume.pdf resume-2page.pdf resume.txt resume.pdf.sha256
+          ls -l index.html resume.pdf resume.txt resume.pdf.sha256
           echo "Checksum:" && cat resume.pdf.sha256
 
       - name: Upload resume artifacts (for non-main branches)
@@ -35,7 +34,6 @@ jobs:
           name: resume-artifacts
           path: |
             resume.pdf
-            resume-2page.pdf
             resume.txt
             index.html
             resume.pdf.sha256

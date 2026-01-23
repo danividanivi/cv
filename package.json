@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "jsonresume-theme-danivi-style": "file:danivi-style",
-    "jsonresume-theme-danivi-long-style": "file:danivi-long-style",
     "resumed": "^6.1.0",
     "puppeteer": "^24.35.0"
   },

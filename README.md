@@ -1,6 +1,6 @@
 # CV
 
-My resume in JSON Resume format with multiple theme options.
+My resume in JSON Resume format with a custom Handlebars theme.
 
 ## View
 
@@ -8,25 +8,16 @@ My resume in JSON Resume format with multiple theme options.
 
 - [HTML](https://danividanivi.github.io/cv/)
 - [PDF](https://danividanivi.github.io/cv/resume.pdf)
-- [Extended PDF](https://danividanivi.github.io/cv/resume-2page.pdf) (single-page with full content)
 
 _Note: If links don't work immediately, the GitHub Actions deployment may still be in progress. You can also build locally using the instructions below._
 
-## Themes
+## Theme
 
-This repository includes two custom themes:
-
-### `danivi-style` (Original)
-- Compact one-page layout
-- Includes current work experience only
-- Traditional resume format
-
-### `danivi-long-style` (Extended)
-- Single-page extended layout with full content
-- Includes work experience, education, volunteer work, and references
-- Excludes archived jobs for focused presentation
-- Full-height sidebar with contact info and skills
-- Streamlined header with summary flowing directly after name/title
+The `danivi-style` theme is a compact one-page layout optimized for ATS and human readability:
+- Clean two-column design with sidebar for contact info and skills
+- Current work experience with highlights
+- Education, languages, and certifications
+- Print-optimized styling
 
 ## Build Locally
 
@@ -34,18 +25,17 @@ This repository includes two custom themes:
 
 ```sh
 npm install
-npm run generate        # Generates all PDFs and TXT files
+npm run generate        # Generates PDF and TXT files
 ```
 
 This produces:
-- `resume.pdf` - compact one-page version
-- `resume-2page.pdf` - extended version with full content
-- `resume.txt` and `resume-2page.txt` - ATS-friendly plain text
+- `resume.pdf` - one-page PDF version
+- `resume.txt` - ATS-friendly plain text
 
 ### Individual Commands
 
 ```sh
-npm run generate:pdf    # PDFs only
+npm run generate:pdf    # PDF only
 npm run generate:txt    # Plain text only
 npm run format          # Format code with Prettier
 ```
@@ -62,7 +52,6 @@ Or manually:
 docker build -t cv-resume:latest .
 docker run --name cv-build cv-resume:latest
 docker cp cv-build:/app/resume.pdf resume.pdf
-docker cp cv-build:/app/resume-2page.pdf resume-2page.pdf
 docker cp cv-build:/app/index.html index.html
 docker rm cv-build
 ```
@@ -75,25 +64,8 @@ resumed render resume.json --theme jsonresume-theme-danivi-style --output index.
 resumed export resume.json --theme jsonresume-theme-danivi-style --output resume.pdf
 ```
 
-### Plain Text Export
-
-The plain text generator creates ATS-friendly versions:
-
-- Excludes archived work experiences (those with `_archived: true`)
-- Uses normalized `YYYY-MM` dates
-- ASCII-friendly (special characters removed)
-- Sections: Summary, Experience, Education, Skills, Languages, References
-
 ## Automated Build
 
 GitHub Actions automatically builds and deploys to GitHub Pages on every push to `main`.
 
 Check the [Actions tab](https://github.com/danividanivi/cv/actions) for build status.
-
-## Dependency Management
-
-[Dependabot](https://docs.github.com/en/code-security/dependabot) keeps dependencies up to date:
-
-- **Schedule**: Weekly on Mondays
-- **Scope**: Minor and patch updates (major versions require manual review)
-- **Labels**: `dependencies`, `automated`
