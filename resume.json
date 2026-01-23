@@ -5,11 +5,11 @@
   },
   "basics": {
     "name": "Daniel Viaño Castro",
-    "label": "Senior Software Engineer",
+    "label": "Senior Software Engineer | C++ & Embedded Linux | Aerospace · Geospatial · Defense",
     "image": "https://github.com/danividanivi.png",
     "email": "danividanivi@gmail.com",
     "phone": "+41 77 277 91 18",
-    "summary": "Senior C++ Software Engineer specializing in aerospace, air traffic management, and embedded systems. Delivers robust, high‑performance solutions for mission‑critical applications with a strong background in system integration and modern software practices. Proven track record across defense, surveying, and advanced imaging systems.",
+    "summary": "I build high-performance software systems where reliability is non-negotiable—from Air Traffic Control platforms managing European airspace to embedded sensor systems integrating cameras and LiDAR for precision geospatial applications. My focus is mission-critical C++ solutions across embedded Linux (Yocto, PetaLinux), real-time video pipelines (GStreamer), and Qt-based interfaces, with a proven track record of optimizing system architectures and ensuring zero production incidents.",
     "location": {
       "countryCode": "CH",
       "city": "Rorschach",
@@ -36,10 +36,10 @@
       "startDate": "2025-01",
       "summary": "Developing hybrid airborne sensor systems for advanced imaging and data acquisition.",
       "highlights": [
-        "Developed the MultiMapper hybrid sensor system to simultaneously collect multi-spectral imagery and 3D point clouds for large-area mapping, achieving superior data consistency, combining 11 RGB and 2 NIR cameras with LiDAR",
-        "Developed firmware to generate accurate multi-spectral TIFF images and 3D point clouds for mapping and terrain modeling, ensuring precise synchronization, using C++ and implementing image acquisition and processing algorithms",
-        "Performed comprehensive testing and validation of the system, ensuring reliable airborne performance, via rigorous unit testing (Google Test) and integration testing (pytest)",
-        "Optimized system architecture for Zynq UltraScale+, reducing power consumption by half and increasing framerate from 0.5 to 4.5 frames per second, by doing changes in the FPGA, firmware and PetaLinux build"
+        "Developed firmware for the MultiMapper hybrid airborne sensor system, combining 11 RGB and 2 NIR cameras with LiDAR to generate accurate 3D point clouds and multi-spectral imagery for large-area mapping",
+        "Engineered precise sensor synchronization algorithms for multi-spectral image acquisition, ensuring sub-millisecond timing accuracy across 13 cameras and LiDAR for photogrammetry applications",
+        "Optimized embedded architecture for Zynq UltraScale+ SoC, achieving 9x framerate improvement (0.5 to 4.5 FPS) and 50% power reduction through FPGA, firmware, and PetaLinux optimizations",
+        "Validated system reliability for airborne operations via comprehensive testing with Google Test and pytest, ensuring data integrity under demanding flight conditions"
       ],
       "url": "https://leica-geosystems.com/products/airborne-systems/hybrid-sensors",
       "location": "Heerbrugg, St. Gallen, Switzerland"
@@ -51,11 +51,11 @@
       "endDate": "2024-12",
       "summary": "Developed military-grade handheld image acquisition devices.",
       "highlights": [
-        "Developed firmware for the Nightwolf multi-spectral targeting system, enabling situational awareness for special forces via SWIR capabilities that penetrate smoke and haze while achieving ±1.5 m accuracy over a 12 km range, leveraging C++ and Qt Framework running on Embedded Linux",
-        "Integrated multi-spectral sensors (daylight, thermal, low light, color CMOS, SWIR) for handheld image acquisition devices, ensuring reliable performance in extreme conditions, via comprehensive testing with Google Test and Robot Framework",
-        "Implemented bidirectional real‑time video streaming and processing, enabling low-latency data transmission for enhanced targeting and situational awareness, using GStreamer",
-        "Developed Augmented Reality widgets to enhance user awareness and interaction, delivering advanced visualization and UI, by using Qt Widgets",
-        "Validated functionality across multiple Embedded Linux platforms, delivering production-ready software for mission-critical operations, employing PetaLinux Tools and Yocto"
+        "Developed firmware for the Nightwolf multi-spectral targeting system, enabling situational awareness for special forces via SWIR capabilities that penetrate smoke and haze while achieving ±1.5 m accuracy over 12 km range, using C++ and Qt Framework",
+        "Built real-time video pipelines with GStreamer for bidirectional streaming and processing, enabling low-latency data transmission critical for targeting and situational awareness in the field",
+        "Integrated multi-spectral sensors (daylight, thermal, low light, CMOS, SWIR) ensuring reliable performance in extreme conditions, validated through comprehensive testing with Google Test and Robot Framework",
+        "Validated and deployed across multiple Embedded Linux platforms using Yocto and PetaLinux, delivering production-ready software for mission-critical defense operations",
+        "Developed Qt-based Augmented Reality widgets enhancing operator awareness with advanced visualization overlays"
       ],
       "url": "https://www.safran-group.com/products-services/nightwolf-unique-handheld-multi-spectral-targeting-system",
       "location": "Heerbrugg, St Gallen, Switzerland"
@@ -67,17 +67,17 @@
       "endDate": "2022-05",
       "summary": "Built and maintained surveillance software for Air Traffic Control systems.",
       "highlights": [
-        "Maintained and modernized legacy surveillance software in Ada, achieving zero production crashes while delivering new features, applying systematic refactoring and optimization",
-        "Implemented ADS‑B as a new data source, providing accurate second‑by‑second position and expanding tracking coverage in non‑radar airspace; reduced ground infrastructure costs by at least 90% versus traditional radar, developing C++ components complementing existing Ada codebase",
-        "Developed C++ components for new Air Traffic Control systems, achieving 99.9% uptime for safety‑critical operations supporting SACTA and iTEC alliance members, through rigorous testing and integration",
-        "Ensured reliability in mission‑critical environments, achieving zero production incidents over a 24‑month deployment across multiple European ATC systems, via comprehensive testing and proactive monitoring"
+        "Implemented ADS-B as a new surveillance data source, expanding tracking coverage into non-radar airspace and reducing ground infrastructure costs by 90% versus traditional radar installations",
+        "Modernized legacy Ada surveillance software to C++, achieving 99.9% uptime while delivering new features through systematic refactoring and rigorous testing",
+        "Developed C++ components for Air Traffic Control systems supporting SACTA and iTEC alliance members across multiple European countries",
+        "Maintained zero production incidents over 24-month deployment across European ATC systems through comprehensive testing and proactive monitoring"
       ],
       "url": "https://www.enaire.es/services/atm/air_traffic_management_systems_atm/sacta",
       "location": "Gijón, Asturias, Spain"
     },
     {
       "name": "Pildo Labs",
-      "position": "Aerospace Engineer",
+      "position": "Aerospace Software Engineer",
       "startDate": "2017-10",
       "endDate": "2020-02",
       "summary": "Designed and developed coordination systems enabling manned and unmanned aircraft to operate collaboratively.",
@@ -143,17 +143,6 @@
   ],
   "education": [
     {
-      "institution": "Universitat Politècnica de Catalunya",
-      "area": "Aerospace Engineering",
-      "studyType": "Bachelor's Degree",
-      "url": "https://eetac.upc.edu/en/study/bachelors-deegrees/aerospace-systems-engineering-1",
-      "courses": [
-        "Specialized in Air Navigation Engineering with a focus on aerospace principles, flight dynamics, avionics, and air traffic management systems."
-      ],
-      "startDate": "2012-09",
-      "endDate": "2017-06"
-    },
-    {
       "institution": "Universidade de Santiago de Compostela",
       "area": "Unmanned Aerial Systems Engineering and Operations",
       "studyType": "Master's Degree",
@@ -163,60 +152,39 @@
       ],
       "startDate": "2018-09",
       "endDate": "2019-06"
+    },
+    {
+      "institution": "Universitat Politècnica de Catalunya",
+      "area": "Aerospace Engineering",
+      "studyType": "Bachelor's Degree",
+      "url": "https://eetac.upc.edu/en/study/bachelors-deegrees/aerospace-systems-engineering-1",
+      "courses": [
+        "Specialized in Air Navigation Engineering with a focus on aerospace principles, flight dynamics, avionics, and air traffic management systems."
+      ],
+      "startDate": "2012-09",
+      "endDate": "2017-06"
     }
   ],
   "skills": [
     {
-      "name": "Programming Languages & Frameworks",
+      "name": "Software Development & Architecture",
       "level": "Expert",
-      "keywords": ["C++", "Qt", "CMake", "Google Test", "GStreamer", "Python", "pytest"]
+      "keywords": ["C++", "Qt Framework", "CMake", "Git", "Python", "Bash", "OOD", "Design Patterns", "Multi-threading"]
     },
     {
-      "name": "Software Development & Methodologies",
+      "name": "Embedded Ecosystems",
       "level": "Expert",
-      "keywords": [
-        "Git",
-        "GitHub/GitLab CI/CD",
-        "Unit/Integration Testing",
-        "Robot Framework",
-        "Scrum",
-        "Jira",
-        "AI-Assisted Development"
-      ]
+      "keywords": ["Embedded Linux", "Yocto Project", "PetaLinux", "Zynq UltraScale+", "Device Drivers", "Cross-compilation", "I2C", "SPI", "UART", "CAN Bus"]
     },
     {
-      "name": "Embedded Systems",
+      "name": "Data & Sensor Integration",
       "level": "Advanced",
-      "keywords": [
-        "Embedded Linux",
-        "PetaLinux",
-        "Yocto Project",
-        "Zynq UltraScale+",
-        "Firmware Development",
-        "Software Validation",
-        "Systems Integration"
-      ]
+      "keywords": ["GStreamer", "LiDAR", "GNSS", "Multi-spectral Cameras", "Photogrammetry", "ADS-B", "RADAR"]
     },
     {
-      "name": "Aviation & Aerospace",
+      "name": "Mission-Critical Standards",
       "level": "Advanced",
-      "keywords": [
-        "Communications",
-        "Navigation",
-        "Surveillance",
-        "ATM",
-        "Air Traffic Control",
-        "ADS‑B",
-        "RADAR",
-        "GNSS",
-        "UAVs",
-        "Systems Engineering"
-      ]
-    },
-    {
-      "name": "Image Processing & Sensors",
-      "level": "Intermediate",
-      "keywords": ["Photogrammetry", "LiDAR", "GPS", "Sensor Integration"]
+      "keywords": ["CI/CD (GitLab/GitHub)", "Google Test", "pytest", "Robot Framework", "DO-178", "ED-12", "Agile", "Scrum"]
     }
   ],
   "languages": [
