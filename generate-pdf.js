@@ -16,9 +16,12 @@ async function generatePDF(resume, outputPath, renderFunction) {
     '--disable-setuid-sandbox',
     '--disable-dev-shm-usage',
     '--disable-gpu',
-    '--single-process',
-    '--no-zygote',
   ];
+
+  // Add Linux-specific args only on non-Windows platforms
+  if (process.platform !== 'win32') {
+    args.push('--single-process', '--no-zygote');
+  }
 
   const browser = await puppeteer.launch({ headless: 'new', args });
   const page = await browser.newPage();
