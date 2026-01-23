@@ -30,135 +30,70 @@ This repository includes two custom themes:
 
 ## Build Locally
 
-To build locally:
+### Quick Start (Recommended)
 
 ```sh
-# Install dependencies
-npm install -g resumed
-npm install ./danivi-style
-npm install ./danivi-long-style
-
-# Generate original one-page version
-resumed render resume.json --theme jsonresume-theme-danivi-style --output index.html
-resumed export resume.json --theme jsonresume-theme-danivi-style --output resume.pdf
-
-# Generate extended single-page version
-resumed render resume.json --theme jsonresume-theme-danivi-long-style --output index-extended.html
-resumed export resume.json --theme jsonresume-theme-danivi-long-style --output resume-2page.pdf
-
-# Generate plain text versions
-npm run generate:txt # produces resume.txt and resume-2page.txt (ATS friendly)
+npm install
+npm run generate        # Generates all PDFs and TXT files
 ```
 
-**Note:** With resumed, you need to reference your local themes using their full package names `jsonresume-theme-danivi-style` and `jsonresume-theme-danivi-long-style`.
+This produces:
+- `resume.pdf` - compact one-page version
+- `resume-2page.pdf` - extended version with full content
+- `resume.txt` and `resume-2page.txt` - ATS-friendly plain text
 
-### Plain Text Export
-
-The repository includes a plain text generator (`generate-txt.js`) that creates ATS-friendly versions:
+### Individual Commands
 
 ```sh
-npm run generate:txt
+npm run generate:pdf    # PDFs only
+npm run generate:txt    # Plain text only
+npm run format          # Format code with Prettier
 ```
 
-Output characteristics:
-
-- Excludes archived work experiences (those with `_archived: true`)
-- Uses normalized `YYYY-MM` dates
-- ASCII-friendly (special non-breaking spaces and uncommon hyphens removed)
-- Sections: Summary, Experience, Education, Skills, Languages, References
-
-You can modify `generate-txt.js` to omit references or adjust formatting if needed.
-
-## Automated Build
-
-This repository uses GitHub Actions to automatically build and deploy the resume to GitHub Pages on every push.
-
-### Build Status
-
-Check the [Actions tab](https://github.com/danividanivi/cv/actions) to see the latest build status.
-
-### Troubleshooting
-
-If the live links don't work:
-
-1. Check if the GitHub Actions build completed successfully
-2. Wait a few minutes for GitHub Pages to deploy
-3. Build locally using the instructions above
-
-## Dependency Management
-
-This repository uses [Dependabot](https://docs.github.com/en/code-security/dependabot) to automatically keep dependencies up to date.
-
-### Configuration
-
-- **Schedule**: Weekly on Mondays at 6:00 PM CET
-- **Scope**: All npm dependencies
-- **Strategy**:
-  - Creates pull requests for minor and patch updates
-  - Ignores major version updates (requires manual review)
-- **Labels**: Automatically adds `dependencies` and `automated` labels
-- **Commit messages**: Prefixed with `deps` or `deps-dev`
-
-### Pull Request Management
-
-- Maximum of 10 open pull requests at once
-- Assigns pull requests to repository owner
-- Uses descriptive commit messages with scope information
-
-To merge dependency updates:
-
-1. Review the changes in the Dependabot pull request
-2. Check if any breaking changes are introduced
-3. Test the build locally if needed
-4. Merge the pull request
-
-## Reproducible Docker Build
-
-For byte-stable (or near byte-stable) outputs across local and CI, a Docker image is provided.
-
-### Quick Usage
+### Using Docker (for CI parity)
 
 ```sh
 ./docker-generate.sh
 ```
 
-Artifacts produced in the repo root:
-
-- `index.html` (original theme)
-- `index-extended.html` (extended theme)
-- `resume.pdf` (original one-page)
-- `resume-2page.pdf` (extended single-page)
-- `resume.txt` (original plain text)
-- `resume-2page.txt` (extended plain text)
-- `resume.pdf.sha256` (checksum for original PDF)
-
-These artifacts are `.gitignore`d; regenerate them rather than committing.
-
-### Manual Docker Commands
+Or manually:
 
 ```sh
 docker build -t cv-resume:latest .
 docker run --name cv-build cv-resume:latest
-docker cp cv-build:/app/index.html index.html
-docker cp cv-build:/app/index-extended.html index-extended.html
 docker cp cv-build:/app/resume.pdf resume.pdf
 docker cp cv-build:/app/resume-2page.pdf resume-2page.pdf
-docker cp cv-build:/app/resume.txt resume.txt
-docker cp cv-build:/app/resume-2page.txt resume-2page.txt
-docker cp cv-build:/app/resume.pdf.sha256 resume.pdf.sha256
+docker cp cv-build:/app/index.html index.html
 docker rm cv-build
-sha256sum -c resume.pdf.sha256 # optional verify
 ```
 
-### Why Docker?
+### Using `resumed` CLI (alternative)
 
-- Fixed Node version & Debian base layer
-- Pinned dependency tree via `package-lock.json`
-- Pre-fetched Chromium matching Puppeteer version
-- Consistent fonts & timezone (UTC)
+```sh
+npm install -g resumed
+resumed render resume.json --theme jsonresume-theme-danivi-style --output index.html
+resumed export resume.json --theme jsonresume-theme-danivi-style --output resume.pdf
+```
 
-### Notes
+### Plain Text Export
 
-- Exact PDF bytes can still change if you update dependencies, base image tag, or Puppeteer/Chromium.
-- To maximize determinism: avoid rebuilding with a moving base tag; consider pinning a digest of the base image.
-- Prefer the Docker path for CI parity; the legacy raw Node instructions are for quick local experimentation.
+The plain text generator creates ATS-friendly versions:
+
+- Excludes archived work experiences (those with `_archived: true`)
+- Uses normalized `YYYY-MM` dates
+- ASCII-friendly (special characters removed)
+- Sections: Summary, Experience, Education, Skills, Languages, References
+
+## Automated Build
+
+GitHub Actions automatically builds and deploys to GitHub Pages on every push to `main`.
+
+Check the [Actions tab](https://github.com/danividanivi/cv/actions) for build status.
+
+## Dependency Management
+
+[Dependabot](https://docs.github.com/en/code-security/dependabot) keeps dependencies up to date:
+
+- **Schedule**: Weekly on Mondays
+- **Scope**: Minor and patch updates (major versions require manual review)
+- **Labels**: `dependencies`, `automated`
