@@ -32,6 +32,12 @@ Handlebars.registerHelper('year', function (dateString) {
   return date.getFullYear();
 });
 
+Handlebars.registerHelper('labelWithBreaks', function (label) {
+  if (!label) return '';
+  // Replace | separators with <br> for multi-line display
+  return label.replace(/\s*\|\s*/g, '<br>');
+});
+
 Handlebars.registerHelper('highlightSkills', function (text, skills) {
   if (!text || !skills) return text || '';
 
