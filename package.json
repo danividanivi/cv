@@ -8,7 +8,7 @@
   "dependencies": {
     "jsonresume-theme-danivi-style": "file:danivi-style",
     "resumed": "^6.1.0",
-    "puppeteer": "^24.35.0"
+    "puppeteer": "^24.36.0"
   },
   "devDependencies": {
     "prettier": "^3.8.1"
