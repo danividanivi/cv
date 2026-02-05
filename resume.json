@@ -36,10 +36,10 @@
       "startDate": "2025-01",
       "summary": "Developing hybrid airborne sensor systems for advanced imaging and data acquisition.",
       "highlights": [
-        "Developed firmware for the MultiMapper hybrid airborne sensor system, combining 11 RGB and 2 NIR cameras with LiDAR to generate accurate 3D point clouds and multi-spectral imagery for large-area mapping",
-        "Engineered precise sensor synchronization algorithms for multi-spectral image acquisition, ensuring sub-millisecond timing accuracy across 13 cameras and LiDAR for photogrammetry applications",
-        "Optimized embedded architecture for Zynq UltraScale+ SoC, achieving 9x framerate improvement (0.5 to 4.5 FPS) and 50% power reduction through FPGA, firmware, and PetaLinux optimizations",
-        "Validated system reliability for airborne operations via comprehensive testing with Google Test and pytest, ensuring data integrity under demanding flight conditions"
+        "Engineered firmware for the MultiMapper hybrid airborne sensor system, combining 11 RGB and 2 NIR cameras with LiDAR to generate accurate 3D point clouds and multi-spectral imagery for large-area mapping",
+        "Engineered precise sensor synchronization algorithms for multi-spectral image acquisition, guaranteeing sub-millisecond timing accuracy across 13 cameras and LiDAR for photogrammetry applications",
+        "Optimized embedded architecture for Zynq UltraScale+ SoC, attaining 9x framerate improvement (0.5 to 4.5 FPS) and 50% power reduction through FPGA, firmware, and PetaLinux optimizations",
+        "Verified system reliability for airborne operations via comprehensive testing with Google Test and pytest, maintaining data integrity under demanding flight conditions"
       ],
       "url": "https://leica-geosystems.com/products/airborne-systems/hybrid-sensors",
       "location": "Heerbrugg, St. Gallen, Switzerland"
@@ -51,11 +51,11 @@
       "endDate": "2024-12",
       "summary": "Developed military-grade handheld image acquisition devices.",
       "highlights": [
-        "Developed firmware for the Nightwolf multi-spectral targeting system, enabling situational awareness for special forces via SWIR capabilities that penetrate smoke and haze while achieving ±1.5 m accuracy over 12 km range, using C++ and Qt Framework",
-        "Built real-time video pipelines with GStreamer for bidirectional streaming and processing, enabling low-latency data transmission critical for targeting and situational awareness in the field",
-        "Integrated multi-spectral sensors (daylight, thermal, low light, CMOS, SWIR) ensuring reliable performance in extreme conditions, validated through comprehensive testing with Google Test and Robot Framework",
-        "Validated and deployed across multiple Embedded Linux platforms using Yocto and PetaLinux, delivering production-ready software for mission-critical defense operations",
-        "Developed Qt-based Augmented Reality widgets enhancing operator awareness with advanced visualization overlays"
+        "Built firmware for the Nightwolf multi-spectral targeting system, providing situational awareness for special forces via SWIR capabilities that penetrate smoke and haze while attaining ±1.5 m accuracy over 12 km range, leveraging C++ and Qt Framework",
+        "Built real-time video pipelines with GStreamer for bidirectional streaming and processing, supporting low-latency data transmission critical for targeting and situational awareness in the field",
+        "Integrated multi-spectral sensors (daylight, thermal, low light, CMOS, SWIR) maintaining reliable performance in extreme conditions, verified through comprehensive testing with Google Test and Robot Framework",
+        "Confirmed and deployed across multiple Embedded Linux platforms using Yocto and PetaLinux, delivering production-ready software for mission-critical defense operations",
+        "Implemented Qt-based Augmented Reality widgets enhancing operator awareness with advanced visualization overlays"
       ],
       "url": "https://www.safran-group.com/products-services/nightwolf-unique-handheld-multi-spectral-targeting-system",
       "location": "Heerbrugg, St Gallen, Switzerland"
@@ -82,10 +82,10 @@
       "endDate": "2020-02",
       "summary": "Designed and developed coordination systems enabling manned and unmanned aircraft to operate collaboratively.",
       "highlights": [
-        "Designed coordination systems for aerial surveillance and firefighting, enabling 24/7 monitoring and extending operations beyond sunset, through simultaneous management of manned and unmanned aircraft",
-        "Developed airborne navigation and communication software for a 25 kg UAV and manned helicopters, ensuring compliance with DO‑178 and ED‑12 certification standards for autonomous flight operations, with C++",
-        "Developed ground control station UI compliant with DO‑278 and ED‑109, giving operators a full operational view beyond limited helicopter line‑of‑sight, leveraging C++ and Qt",
-        "Integrated ADS‑B, RADAR, and GNSS acquisition solutions, achieving centimeter‑level positioning accuracy for precision aerial operations, by combining multiple data sources"
+        "Designed coordination systems for aerial surveillance and firefighting, facilitating 24/7 monitoring and extending operations beyond sunset, through simultaneous management of manned and unmanned aircraft",
+        "Created airborne navigation and communication software for a 25 kg UAV and manned helicopters, guaranteeing compliance with DO‑178 and ED‑12 certification standards for autonomous flight operations, employing C++",
+        "Designed ground control station UI compliant with DO‑278 and ED‑109, giving operators a full operational view beyond limited helicopter line‑of‑sight, leveraging C++ and Qt",
+        "Integrated ADS‑B, RADAR, and GNSS acquisition solutions, attaining centimeter‑level positioning accuracy for precision aerial operations, by combining multiple data sources"
       ],
       "url": "https://www.linkedin.com/company/pildo-labs/",
       "location": "Rozas Aerodrome, Lugo, Spain"
@@ -97,8 +97,8 @@
       "endDate": "2017-12",
       "summary": "Validated tools and conducted studies for air traffic research.",
       "highlights": [
-        "Contributed to the 2018 ECAC‑wide study on continuous climb/descent operations, identifying €150M potential annual fuel savings across European airspace, through fixing and validating required Java tools",
-        "Analyzed a full year of European air traffic ADS‑B data, processing millions of flights to provide actionable insights for Pan‑European optimization studies, using advanced filtering and analysis"
+        "Contributed to the 2018 ECAC‑wide study on continuous climb/descent operations, identifying €150M potential annual fuel savings across European airspace, through fixing and verifying required Java tools",
+        "Analyzed a full year of European air traffic ADS‑B data, processing millions of flights to provide actionable insights for Pan‑European optimization studies, employing advanced filtering and analysis"
       ],
       "url": "https://www.eurocontrol.int/concept/continuous-climb-and-descent-operations",
       "location": "Brussels, Belgium"
