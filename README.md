@@ -8,6 +8,7 @@ My resume in JSON Resume format with a custom Handlebars theme.
 
 - [HTML](https://danividanivi.github.io/cv/)
 - [PDF](https://danividanivi.github.io/cv/resume.pdf)
+- [TXT](https://danividanivi.github.io/cv/resume.txt)
 
 _Note: If links don't work immediately, the GitHub Actions deployment may still be in progress. You can also build locally using the instructions below._
 
