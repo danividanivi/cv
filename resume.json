@@ -36,8 +36,8 @@
       "startDate": "2025-01",
       "summary": "Developing hybrid airborne sensor systems for advanced imaging and data acquisition.",
       "highlights": [
-        "Engineered firmware for the MultiMapper hybrid airborne sensor system, combining 11 RGB and 2 NIR cameras with LiDAR to generate accurate 3D point clouds and multi-spectral imagery for large-area mapping",
-        "Engineered precise sensor synchronization algorithms for multi-spectral image acquisition, guaranteeing sub-millisecond timing accuracy across 13 cameras and LiDAR for photogrammetry applications",
+        "Engineered C++ firmware for the MultiMapper hybrid airborne sensor system, combining 11 RGB and 2 NIR cameras with LiDAR to generate accurate 3D point clouds and multi-spectral imagery for large-area mapping",
+        "Developed precise sensor synchronization algorithms for multi-spectral image acquisition, guaranteeing sub-millisecond timing accuracy across 13 cameras and LiDAR for photogrammetry applications",
         "Optimized embedded architecture for Zynq UltraScale+ SoC, attaining 9x framerate improvement (0.5 to 4.5 FPS) and 50% power reduction through FPGA, firmware, and PetaLinux optimizations",
         "Verified system reliability for airborne operations via comprehensive testing with Google Test and pytest, maintaining data integrity under demanding flight conditions"
       ],
