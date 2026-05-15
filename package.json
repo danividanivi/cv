@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "test": "node test-runner.js",
     "generate": "npm run generate:txt && npm run generate:pdf",
     "generate:txt": "node generate-txt.js",
     "generate:pdf": "node generate-pdf.js",
