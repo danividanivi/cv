@@ -9,6 +9,11 @@
 <body>
     <div class="resume-container">
         <header class="header">
+            {{#if resume.basics.image}}
+            <div class="photo-container">
+                <img src="{{resume.basics.image}}" alt="{{resume.basics.name}}" class="profile-photo">
+            </div>
+            {{/if}}
             <div class="header-content">
                 <h1>{{resume.basics.name}}</h1>
                 <h2>{{{resume.basics.label}}}</h2>
