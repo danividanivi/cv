@@ -89,6 +89,11 @@ function registerHelpers(Handlebars) {
 
     return text.replace(regex, (m) => `<strong>${m}</strong>`);
   });
+
+  Handlebars.registerHelper('or', function () {
+    const args = Array.prototype.slice.call(arguments, 0, -1);
+    return args.some(Boolean);
+  });
 }
 
 module.exports = { registerHelpers };

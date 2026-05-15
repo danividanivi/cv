@@ -42,20 +42,34 @@ body {
 
 /* Header */
 .header {
-  text-align: center;
   margin-bottom: 8px;
   padding-bottom: 6px;
   border-bottom: 1px solid #ecf0f1;
   page-break-inside: avoid;
 }
 
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
 .photo-container {
-  margin-bottom: 6px;
+  flex-shrink: 0;
 }
 
 .profile-photo {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid white;
@@ -74,7 +88,7 @@ body {
   font-size: 12px;
   color: #5d6d8a;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 /* Contact Information */
